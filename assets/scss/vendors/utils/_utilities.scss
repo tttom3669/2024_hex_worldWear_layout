@@ -915,8 +915,18 @@ $utilities: map-merge(
         property: z-index,
         class: z,
         values: $zindex-levels,
+      ),
+    // scss-docs-end utils-zindex
+    // cus*
+    'letter-spacing':
+      (
+        property: letter-spacing,
+        class: tracking,
+        values: (
+          sm: 0.02em,
+          md: 0.04em,
+        ),
       )
-      // scss-docs-end utils-zindex
   ),
   $utilities
 );

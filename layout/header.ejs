@@ -1,4 +1,58 @@
-<!-- <h1 class="header">我是 header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a> -->
+<header class="header <%= (type==='light' ) ? 'header--light' : 'header--dark' %>">
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <div class="d-flex align-items-center gap-12">
+        <a class="navbar-brand" href="#">
+          <h1 class="">
+            <svg class="l-logo" width="120" height="72">
+              <use xlink:href="/assets/images/Logo.svg#logo"></use>
+            </svg>
+          </h1>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav l-menu ">
+            <li class="nav-item dropdown">
+              <a class="nav-link l-menu__link" href="#navbarDropdownWoman">Woman</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link l-menu__link" href="#navbarDropdownMan">Man</a>
+            </li>
+          </ul>
+          <!-- <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+        </div>
+      </div>
+    </div>
+    <div id="navbarDropdownWoman" class="l-menu__dropdown">
+      <div class="container">
+        <ul class="l-menu__dropdown-menu">
+          <li><a class="l-menu__dropdown-link" href="#">所有商品</a></li>
+          <li><a class="l-menu__dropdown-link" href="#">上衣</a></li>
+          <li><a class="l-menu__dropdown-link" href="#">外套</a></li>
+          <li><a class="l-menu__dropdown-link" href="#">褲子</a></li>
+          <li><a class="l-menu__dropdown-link" href="#">裙子</a></li>
+          <li><a class="l-menu__dropdown-link" href="#">洋裝</a></li>
+          <li><a class="l-menu__dropdown-link" href="#">服飾配件</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="navbarDropdownMan" class="l-menu__dropdown">
+      <div class="container">
+        <ul class="l-menu__dropdown-menu">
+          <li><a class="l-menu__dropdown-link" href="#">所有商品</a></li>
+          <li><a class="l-menu__dropdown-link" href="#">上衣</a></li>
+          <li><a class="l-menu__dropdown-link" href="#">外套</a></li>
+          <li><a class="l-menu__dropdown-link" href="#">褲子</a></li>
+          <li><a class="l-menu__dropdown-link" href="#">服飾配件</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

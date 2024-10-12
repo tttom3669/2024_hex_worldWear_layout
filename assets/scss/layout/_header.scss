@@ -1,4 +1,153 @@
-// .header{
-//   background: #69F0AE;
-//   font-size: 64px;
-// }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  transition: background-color ease 0.3s;
+  & + main:not(.site-index) {
+    padding-top: $header-height;
+  }
+  .navbar {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .navbar-brand {
+    padding: 0;
+  }
+}
+
+.l-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  &__link {
+    position: relative;
+    display: block;
+    font-weight: 700;
+    color: $black;
+    letter-spacing: 0.02em;
+    padding: 8px 16px;
+    &::before {
+      display: block;
+      content: '';
+      height: 2px;
+      background-color: $black;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      transition: width 0.3s ease;
+    }
+    &.active {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  &__dropdown {
+    position: absolute;
+    background-color: white;
+    border: none;
+    border-radius: 0;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    &.show {
+      margin: 0;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    &-menu {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 24px;
+      padding-left: 167px;
+    }
+    &-link {
+      color: $black;
+      padding: 8px 16px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+.header {
+  &--light {
+    .l-logo {
+      color: $black;
+    }
+    .l-menu {
+      &__link {
+        &,
+        &.active {
+          color: $black;
+        }
+        &::before {
+          background-color: $black;
+        }
+      }
+
+      &__dropdown {
+        background-color: white;
+        &-link {
+          color: $black;
+        }
+      }
+    }
+  }
+  &--dark {
+    .l-logo {
+      color: $white;
+    }
+    .l-menu {
+      &__link {
+        &,
+        &.active {
+          color: $white;
+        }
+        &::before {
+          background-color: $white;
+        }
+      }
+      // &__dropdown {
+      //   background-color: transparent;
+      //   &-link {
+      //     color: $white;
+      //   }
+      // }
+    }
+    &:hover,
+    &:has(.l-menu__link.active) {
+      background-color: $white;
+      .l-logo {
+        color: $black;
+      }
+      .l-menu {
+        &__link {
+          &,
+          &.active {
+            color: $black;
+          }
+          &::before {
+            background-color: $black;
+          }
+        }
+        &__dropdown {
+          background-color: $white;
+          &-link {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
