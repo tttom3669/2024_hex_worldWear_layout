@@ -117,22 +117,35 @@ function mainMenuHandler() {
 }
 
 function headerGsap() {
-  const header = document.querySelector('.header--dark');
+  const header = document.querySelector('header');
+  const main = document.querySelector('main');
+  let hederType = null;
   gsap.registerPlugin(ScrollTrigger);
 
   ScrollTrigger.create({
-    trigger: '.site-index__banner',
-    start: 'bottom top', // 當 banner 底部與 viewport 頂端對齊時觸發
-    end: 'bottom top', // 同樣的起點與終點
+    trigger: main,
+    start: 'top top', // 當 banner 頂部與 viewport 頂端對齊時觸發
+    // markers: true,
     onEnter: () => {
       // 向下滾動到達時添加 class
-      header.classList.remove('header--dark');
-      header.classList.add('header--light');
+
+      if (header.classList.contains('header--dark')) {
+        hederType = 'dark';
+        header.classList.remove('header--dark');
+      } else {
+        hederType = 'light';
+        header.classList.remove('header--light');
+      }
+      header.classList.add('header--scroll');
     },
     onLeaveBack: () => {
       // 向上滾動回來時移除 class
-      header.classList.remove('header--light');
-      header.classList.add('header--dark');
+      header.classList.remove('header--scroll');
+      if (hederType === 'dark') {
+        header.classList.add('header--dark');
+      } else {
+        header.classList.add('header--light');
+      }
     },
   });
 }

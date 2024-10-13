@@ -1,13 +1,25 @@
 // header 、 menu
 .header {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: $header-aside-height-mobile;
   left: 0;
   right: 0;
   z-index: 1100;
   transition: background-color ease 0.3s;
+  @include media-breakpoint-up(lg) {
+    top: $header-aside-height;
+  }
+
+  &--scroll {
+    position: fixed;
+    top: 0;
+  }
+
   & + main:not(.site-index) {
-    padding-top: $header-height;
+    padding-top: calc($header-height-mobile + $header-aside-height-mobile);
+    @include media-breakpoint-up(lg) {
+      padding-top: calc($header-height + $header-aside-height);
+    }
   }
   .navbar {
     padding-top: 8px;
@@ -62,6 +74,14 @@
       &.active {
         display: none;
       }
+    }
+  }
+  .l-logo {
+    width: 96px;
+    height: 56px;
+    @include media-breakpoint-up(lg) {
+      width: 120px;
+      height: 72px;
     }
   }
 
@@ -207,7 +227,8 @@
 
 // header 顏色管理
 .header {
-  &--light {
+  &--light,
+  &--scroll {
     background-color: $white;
     color: $black;
   }
@@ -224,9 +245,6 @@
 }
 
 .header--logout {
-  // &__item {
-  //   display: none;
-  // }
   .header {
     &--login__item {
       display: none;
