@@ -1,21 +1,17 @@
-<header class="header <%= (type==='light' ) ? 'header--light' : 'header--dark' %>">
+<header class="header header--login <%= (type==='light' ) ? 'header--light' : 'header--dark' %>">
 
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <div class="d-flex align-items-center gap-12">
-        <a class="navbar-brand" href="#">
-          <h1 class="">
-            <svg class="l-logo" width="120" height="72">
-              <use xlink:href="/assets/images/Logo.svg#logo"></use>
-            </svg>
-          </h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav l-menu ">
+      <div class="d-flex justify-content-lg-between align-items-center w-100">
+        <div class="d-flex align-items-center gap-lg-12 flex-fill">
+          <a class="text-reset me-auto m-lg-0" href="#">
+            <h1>
+              <svg class="l-logo" width="120" height="72">
+                <use xlink:href="/assets/images/Logo.svg#logo"></use>
+              </svg>
+            </h1>
+          </a>
+          <ul class="navbar-nav l-menu">
             <li class="nav-item dropdown">
               <a class="nav-link l-menu__link" href="#navbarDropdownWoman">Woman</a>
             </li>
@@ -23,11 +19,73 @@
               <a class="nav-link l-menu__link" href="#navbarDropdownMan">Man</a>
             </li>
           </ul>
-          <!-- <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form> -->
         </div>
+        <div class="d-flex">
+          <div class="position-lg-relative d-flex align-items-center">
+            <div class="header__searchBar-container">
+              <div class="container px-lg-0">
+                <form class="d-flex w-100 w-lg-auto" role="search">
+                  <input class="form-control header__searchBar w-100 w-lg-auto" type="search" placeholder="Search"
+                    aria-label="Search">
+                </form>
+              </div>
+            </div>
+            <button type="button"
+              class="header__searchIcon border-0 bg-transparent justify-content-center align-items-center p-3 p-lg-0">
+              <svg width="16" height="16">
+                <use xlink:href="/assets/images/search.svg#search"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="ms-6 d-none d-lg-block">
+            <div class="header--login__item">
+              <ul class="d-flex gap-6">
+                <li>
+                  <a href="#" class="text-reset">
+                    <svg width="16" height="16">
+                      <use xlink:href="/assets/images/cart.svg#cart"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-reset">
+                    <svg width="16" height="16">
+                      <use xlink:href="/assets/images/heart.svg#heart"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="/assets/images/user.png" alt="user" width="24" height="24">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="l-menu__collapse">
+            <ul class="navbar-nav l-menu header--logout__item">
+              <li><a class="nav-link l-menu__link" href="#">登入</a></li>
+              <li><a class="nav-link l-menu__link" href="#">註冊</a></li>
+            </ul>
+            <ul class="navbar-nav l-menu d-lg-none header--login__item">
+              <li><a class="nav-link l-menu__link" href="#">購物車</a></li>
+              <li><a class="nav-link l-menu__link" href="#">收藏清單</a></li>
+              <li><a class="nav-link l-menu__link" href="#">會員中心</a></li>
+            </ul>
+          </div>
+        </div>
+        <button type="button"
+          class="l-menu__collapse-btn border-0 bg-transparent p-2 <%= (mode==='login' ) ? 'l-menu__collapse-btn--login' : '' %>">
+          <div class="header--logout__item">
+            <svg width="24" height="24">
+              <use xlink:href="/assets/images/list.svg#list"></use>
+            </svg>
+            <svg class="d-none" width="24" height="24">
+              <use xlink:href="/assets/images/close.svg#close"></use>
+            </svg>
+          </div>
+          <img class="header--login__item" src="/assets/images/user.png" alt="user" width="24" height="24">
+        </button>
       </div>
     </div>
     <div id="navbarDropdownWoman" class="l-menu__dropdown">

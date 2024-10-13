@@ -104,6 +104,8 @@ $utilities: map-merge(
     // scss-docs-start utils-position
     'position':
       (
+        responsive: true,
+        //  cus*
         property: position,
         values: static relative absolute fixed sticky,
       ),
@@ -213,6 +215,8 @@ $utilities: map-merge(
     // scss-docs-start utils-sizing
     'width':
       (
+        responsive: true,
+        // cus*
         property: width,
         class: w,
         values: (
