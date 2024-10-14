@@ -97,6 +97,7 @@ function mainMenuHandler() {
       }
       // 防止點擊選單本身時關閉選單
       e.stopPropagation();
+      e.preventDefault();
     });
   });
 
