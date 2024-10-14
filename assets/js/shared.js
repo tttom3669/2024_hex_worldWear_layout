@@ -17,6 +17,19 @@ function mainMenuHandler() {
   const searchTrigger = document.querySelector(`.header__searchIcon`);
   const searchBar = document.querySelector(`.header__searchBar-container`);
 
+  // 手機版選單 icon 切換 (未登入)
+  const toggleCollapseBtn = function () {
+    // 登出時手機版選單，點擊會更換 icon
+    if (!collapseBtn.classList.contains('l-menu__collapse-btn--login')) {
+      const svgList = collapseBtn.querySelector('.header--logout__item')
+        .children[0];
+      const svgClose = collapseBtn.querySelector('.header--logout__item')
+        .children[1];
+      svgList.classList.toggle('d-none');
+      svgClose.classList.toggle('d-none');
+    }
+  };
+
   // 關閉下拉選單內容
   const closeContent = (target = 'all') => {
     menuLinkGroup.forEach((link) => {
@@ -34,25 +47,15 @@ function mainMenuHandler() {
     }
     if (target === 'all' || target !== collapseContent) {
       collapseContent.classList.remove('show');
-      if (!collapseBtn.classList.contains('l-menu__collapse-btn--login')) {
-        const svgList = collapseBtn.children[0];
-        const svgClose = collapseBtn.children[1];
-        svgList.classList.toggle('d-none');
-        svgClose.classList.toggle('d-none');
-      }
+      toggleCollapseBtn();
     }
   };
 
+  // 手機版選單按鈕點擊監控
   collapseBtn.addEventListener('click', (e) => {
     const content = document.querySelector(`.l-menu__collapse`);
     const isCollapse = !content.classList.contains('show');
-
-    if (!collapseBtn.classList.contains('l-menu__collapse-btn--login')) {
-      const svgList = collapseBtn.children[0];
-      const svgClose = collapseBtn.children[1];
-      svgList.classList.toggle('d-none');
-      svgClose.classList.toggle('d-none');
-    }
+    toggleCollapseBtn();
 
     if (isCollapse) {
       closeContent(content);
@@ -64,6 +67,7 @@ function mainMenuHandler() {
     e.stopPropagation();
   });
 
+  // 搜尋按鈕點擊監控
   searchTrigger.addEventListener('click', (e) => {
     const isCollapse = !searchBar.classList.contains('show');
 
@@ -76,10 +80,8 @@ function mainMenuHandler() {
     }
     e.stopPropagation();
   });
-  searchBar.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
 
+  // 下拉選單點擊監控
   menuLinkGroup.forEach((link) => {
     const href = link.attributes.href.value;
     const target = document.querySelector(`${href}`);
@@ -104,6 +106,7 @@ function mainMenuHandler() {
     searchBar.classList.remove('show');
   });
 
+  // 避免點擊選單內容時，關閉選單
   document.querySelectorAll('.l-menu__dropdown').forEach((dropdown) => {
     dropdown.addEventListener('click', (e) => {
       // 防止點擊選單本身時關閉選單
@@ -114,8 +117,16 @@ function mainMenuHandler() {
     // 防止點擊選單本身時關閉選單
     e.stopPropagation();
   });
+
+  searchBar.addEventListener('click', (e) => {
+    // 防止點擊選單本身時關閉選單
+    e.stopPropagation();
+  });
 }
 
+/**
+ * Header 滾動監控
+ */
 function headerGsap() {
   const header = document.querySelector('header');
   const main = document.querySelector('main');
