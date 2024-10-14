@@ -249,6 +249,8 @@ $utilities: map-merge(
       ),
     ),
     'height': (
+      responsive: true,
+      // cus*
       property: height,
       class: h,
       values: (
@@ -596,6 +598,8 @@ $utilities: map-merge(
       ),
     'font-size': (
       rfs: true,
+      responsive: true,
+      // cus*
       property: font-size,
       class: fs,
       values: $font-sizes,
@@ -930,7 +934,28 @@ $utilities: map-merge(
           sm: 0.02em,
           md: 0.04em,
         ),
-      )
+      ),
+    'background-size': (
+      property: background-size,
+      class: bg,
+      values: (
+        'cover': cover,
+      ),
+    ),
+    'background-position': (
+      property: background-position,
+      class: bg,
+      values: (
+        'center': center,
+      ),
+    ),
+    'background-repeat': (
+      property: background-repeat,
+      class: bg,
+      values: (
+        'no-repeat': no-repeat,
+      ),
+    )
   ),
   $utilities
 );

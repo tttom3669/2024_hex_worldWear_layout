@@ -2,19 +2,27 @@
   &__banner {
     position: relative;
     display: flex;
-    height: 100dvh;
-    &::before {
-      position: absolute;
-      content: '';
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.4) 0%,
-        rgba(0, 0, 0, 0) 100%
-      );
+    flex-wrap: wrap;
+    height: calc(100dvh - $header-aside-height-mobile);
+    @include media-breakpoint-up(lg) {
+      height: calc(100dvh - $header-aside-height);
+    }
+    & > * {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.4) 0%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      }
     }
   }
 }
