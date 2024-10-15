@@ -10,13 +10,13 @@ $primary-70: rgba(231, 155, 53, 1);
 $primary-80: rgba(255, 185, 98, 1);
 $primary-90: rgba(255, 221, 185, 1);
 
-$secondary-40: rgba(147, 0, 10, 1);
-$secondary-50: rgba(186, 26, 26, 1);
-$secondary-60: rgba(222, 55, 48, 1);
-$secondary-70: rgba(241, 78, 58, 1);
-$secondary-80: rgba(255, 137, 125, 1);
-$secondary-90: rgba(255, 180, 171, 1);
-$secondary-95: rgba(255, 218, 214, 1);
+$secondary-30: rgba(147, 0, 10, 1);
+$secondary-40: rgba(186, 26, 26, 1);
+$secondary-50: rgba(222, 55, 48, 1);
+$secondary-60: rgba(241, 78, 58, 1);
+$secondary-70: rgba(255, 137, 125, 1);
+$secondary-80: rgba(255, 180, 171, 1);
+$secondary-90: rgba(255, 218, 214, 1);
 
 $nature-10: rgba(28, 27, 27, 1);
 $nature-20: rgba(49, 48, 48, 1);
@@ -40,13 +40,13 @@ $custom-colors: (
   'primary-70': $primary-70,
   'primary-80': $primary-80,
   'primary-90': $primary-90,
+  'secondary-30': $secondary-30,
   'secondary-40': $secondary-40,
   'secondary-50': $secondary-50,
   'secondary-60': $secondary-60,
   'secondary-70': $secondary-70,
   'secondary-80': $secondary-80,
   'secondary-90': $secondary-90,
-  'secondary-95': $secondary-95,
   'nature-10': $nature-10,
   'nature-20': $nature-20,
   'nature-30': $nature-30,
@@ -95,11 +95,17 @@ $font-sizes: (
 ) !default;
 // ------ #font-size ------
 
-// ------ $headings ------
+// ------ headings ------
 
 $headings-font-weight: 700 !default;
 
-// ------ #$headings ------
+// ------ #headings ------
+
+// ------ Body ------
+
+$body-color: $black !default;
+
+// ------ #Body ------
 
 // ============ Spacing ============
 $spacer: 1rem !default;
