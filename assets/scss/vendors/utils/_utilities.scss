@@ -225,6 +225,8 @@ $utilities: map-merge(
           75: 75%,
           100: 100%,
           auto: auto,
+          //cus*
+          24px: 24px,
         ),
       ),
     'max-width': (
@@ -671,6 +673,8 @@ $utilities: map-merge(
     // scss-docs-start utils-color
     'color':
       (
+        responsive: true,
+        //cus*
         property: color,
         class: text,
         local-vars: (
