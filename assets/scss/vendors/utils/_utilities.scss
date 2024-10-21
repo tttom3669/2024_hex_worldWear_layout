@@ -772,6 +772,8 @@ $utilities: map-merge(
     // scss-docs-start utils-bg-color
     'background-color':
       (
+        responsive: true,
+        // cus*
         property: background-color,
         class: bg,
         local-vars: (
