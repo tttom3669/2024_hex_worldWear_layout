@@ -1,0 +1,329 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+.fs-14px {
+    font-size: 14px;
+}
+
+.fs-24px {
+    font-size: 24px;
+}
+
+.mt-12px {
+    margin-top: 12px;
+}
+
+.mt-16px {
+    margin-top: 16px;
+}
+
+.mt-20px {
+    margin-top: 20px;
+}
+
+.mt-120px {
+    margin-top: 120px;
+}
+
+.mr-24px {
+    margin-right: 24px;
+}
+
+.mb20px {
+    margin-bottom: 20px;
+}
+
+.mb120px {
+    margin-bottom: 120px;
+}
+
+.p12px {
+    padding: 12px;
+}
+
+.pb20px {
+    padding-bottom: 20px;
+}
+
+.pb29px {
+    padding-bottom: 29px;
+}
+
+.plr26px {
+    padding-left: 26px;
+    padding-right: 26px;
+}
+
+.w10 {
+    width: 10%;
+}
+
+.w20 {
+    width: 20%;
+}
+
+.w30 {
+    width: 30%;
+}
+
+.w45 {
+    width: 45%;
+}
+
+.w60 {
+    width: 60%;
+}
+
+.w70 {
+    width: 70%;
+}
+.w80 {
+    width: 80%;
+}
+
+
+.bg-BrandRed {
+    background-color: #FFB4AB;
+}
+
+
+
+// .trStyle {
+//     padding: 20px 12px;
+//     border-bottom: 1px #E5E2E0 solid;
+// }
+
+.shoppingCartLayoutGrid {
+    max-width: 1296px;
+    padding: 0px 110px;
+     margin-top: 161px !important;
+}
+
+// .tableTheadbg {
+//     background: #E5E2E0;
+// }
+
+// .tableTheadtr {
+//     padding-top: 8px;
+//     padding-bottom: 8px;
+
+// }
+
+// .cartTbody {
+//     margin-top: 12px;
+// }
+
+.cartProductImg {
+    width: 15%;
+    max-height: 110px;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.delMoneyStyle {
+    text-decoration: line-through;
+    color: #ADAAAA;
+}
+
+.btnNumber {
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px black solid !important;
+}
+
+.btnNumber:hover{
+    background-color: #F1F0F0;
+}
+
+.inputNum {
+    width: 42px;
+    text-align: center;
+    border-color: black;
+    border: 1px black solid;
+    border-right: 0px;
+    border-left: 0px;
+}
+
+/* 隱藏增減箭頭 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.cartHeader {
+    background-color: #E5E2E0;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.cartCard {
+    border: 0px !important;
+    border-bottom: 1px #E5E2E0 solid !important;
+}
+
+.cartCardBody {
+    padding: 20px 12px;
+}
+
+
+/* 針對螢幕寬度小於等於 600px 的裝置 */
+@media (max-width: 375px) {
+
+    .shoppingCartLayoutGrid {
+        max-width: 351px;
+        padding: 0px 0px;
+        margin-top: 161px !important;
+    }
+
+    .shoppingCartLayoutGrid {
+        padding: 0px 12px;
+    }
+
+    .cartCardBody {
+        flex-direction: column;
+    }
+
+    .cartHeader{
+        display: none !important;
+    }
+
+    .cartCardBody {
+        padding-top: 12px;
+        padding-bottom: 20px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .cartProductImg{
+        width: 100%;
+        max-height:  234px;
+    }
+    .productIntroduction{
+        margin-top: 76px;
+        width: 60%;
+        margin-bottom: 12px;
+    }
+
+    .cartUnitPrice{
+        position: absolute;
+        top: 270px;   
+        left: 10px;   
+    }
+
+    .cartQuantity{
+        margin-left: 20px;
+    }
+
+    .mobelQtyTotalDiv{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cartTotal{
+        width: auto;
+    }
+
+    .discountDiv{
+        padding: 0px;
+        margin-bottom: 12px;
+        flex-direction: column;
+        align-items: flex-end;
+        
+    }
+    .discountCodeDiv{
+        width: 100% !important;
+        
+    }
+    
+    .DiscountCodetxt{
+        width: 73%;
+        border: 1px black solid;
+    }
+    
+    .discountCodeMessageDiv{
+        justify-content: flex-end;
+        margin-bottom: 12px;
+    }
+
+    .checkoutDiv{
+        flex-direction: column;
+    }
+
+    .btnKeepShopping {
+        margin-right: 0px !important;
+        margin-bottom: 12px;
+    }
+    
+    .illustrate {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+}
+
+
+
+.discountCodeDiv {
+    width: 50%;
+}
+
+.btnDiscountCode {
+    border-color: black;
+    border: 1px black solid;
+}
+
+.discountCodeMessage {
+    padding: 4px 8px;
+    border: 1px #FF897D solid;
+    font-weight: 500;
+}
+
+.totalNum {
+    font-size: 28px;
+    margin-left: 24px;
+}
+
+.totalDiv {
+    border-bottom: 1px #E5E2E0 solid;
+}
+
+.btnKeepShopping {
+    display: inline-block;
+    padding: 16px 86.5px;
+    margin-right: 20px;
+}
+
+.btnKeepShopping:hover {
+    background-color: #f1f0f0;
+}
+
+.btnCheckout {
+    background-color: #FFB962;
+    display: inline-block;
+    padding: 16px 86.5px;
+}
+
+.btnCheckout:hover {
+    background-color: #c88119;
+}
+
+.illustrate {
+    border: 1px #E5E2E0 solid;
+    padding: 24px;
+    font-size: 14px;
+}
+
+.illustrate p {
+    color: #605E5D;
+}
