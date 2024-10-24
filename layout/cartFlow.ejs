@@ -1,20 +1,35 @@
-<div class="cartFlowGrid">
-    <div class="d-flex m-auto textcolors-Yellow">
-        <div> <span>購物明細</span> </div>
-        <div> <span>結帳資訊</span> </div>
-        <div> <span>完成訂單</span> </div>
+<div class="cartFlowGrid ">
+    <div class="d-flex w-100 flex-column align-items-center">
+        <div class="d-flex cartFlowTxtDiv w76 align-items-center mb12px">
+            <div>
+                <p class="textcolors-Yellow">購物明細</p>
+            </div>
+            <div>
+                <p class="textcolors-Yellow">結帳資訊</p>
+            </div>
+            <div>
+                <p class="textcolors-Yellow">完成訂單</p>
+            </div>
+        </div>
+        <div class="d-flex w-100 justify-content-center pl12px">
+            <div class="d-flex flex-column w-40">
+                <div class=" d-flex ">
+                    <p class="cartFlowP rounded-circle <%= (stage==='1' ) ? 'cartFlowChk' : '' %>">1</p>
+                    <hr class="<%= (stage==='1' ) ? 'cartFlowChk' : '' %>">
+                </div>
+            </div>
+            <div class="d-flex flex-column w-40">
+                <div class=" d-flex">
+                    <p class="cartFlowP rounded-circle <%= (stage==='2' ) ? 'cartFlowChk' : '' %>">2</p>
+                    <hr class="<%= (stage==='2' ) ? 'cartFlowChk' : ''  %>">
+                </div>
+            </div>
+            <div class="d-flex flex-column ">
+                <div class="">
+                    <p class="cartFlowP rounded-circle <%= (stage==='3' ) ? 'cartFlowChk' : '' %>">3</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="d-flex m-auto">
-        <div  class=" d-flex">
-            <p class="cartFlowP">1</p>
-            <div class="cartFlowDiv"></div>
-        </div>
-        <div class="cartFlow2 d-flex">
-            <p class="cartFlowP">2</p>
-            <div class="cartFlowDiv"></div>
-        </div>
-        <div  class="cartFlow3">
-            <p class="cartFlowP">3</p>
-        </div>
-    </div>
+
 </div>
