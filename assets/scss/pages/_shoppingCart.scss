@@ -178,7 +178,7 @@ input[type="number"] {
 
 
 /* 針對螢幕寬度小於等於 600px 的裝置 */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
 
     .shoppingCartLayoutGrid {
         max-width: 351px;
@@ -223,11 +223,13 @@ input[type="number"] {
 
     .cartQuantity{
         margin-left: 20px;
+        width: 50px;
     }
 
     .mobelQtyTotalDiv{
-        display: flex;
-        justify-content: space-between;
+        display: flex !important;
+        justify-content: space-between !important;
+        width: 100% !important;
     }
 
     .cartTotal{
