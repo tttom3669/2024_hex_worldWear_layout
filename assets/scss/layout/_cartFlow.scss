@@ -1,31 +1,64 @@
+.pl12px{
+    padding-left: 12px;
+}
+
+.mb12px{
+    margin-bottom: 12px;
+}
+
+.w-40{
+    width: 35%;
+}
+
+.w76{
+    width: 76%;
+}
+
 .textcolors-Yellow {
     color: #865300;
 }
 
 .cartFlowGrid {
     max-width: 1296px;
+    // margin-top: 130px;
+    margin: 130px auto 40px auto;
     // padding: 0px 110px; 
-    margin: auto;
+    
 
+}
+
+.cartFlowTxtDiv{
+    justify-content: space-between;
 }
 
 .cartFlowP {
     display: inline-block;
     width: 40px;
     height: 40px;
-    color: #C88119;
+    //color: #C88119;
     background-color: #FFDDB9;
     font-weight: bold;
+    text-align: center;
+    line-height:40px;
 }
 
-.cartFlowDiv {
-    max-width: 30%;
-    height: 4px;
-    background-color: #FFDDB9;
+hr {
+    width: 100%;
+    border: 4px #FFDDB9 solid;
+    // height: 4px;
+    // background-color: #FFDDB9;
+
 }
 
 
 .cartFlowChk {
     color: #fff;
-    background-color: #C88119;
+    background-color: #A86900;
+    border-color: #A86900;
+}
+
+@media (max-width: 768px) {
+    .cartFlowTxtDiv{
+        width: 90%;
+    }
 }
