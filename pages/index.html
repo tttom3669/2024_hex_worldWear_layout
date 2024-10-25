@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>index</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
 
-<body>
-  <%- include('./layout/header',{type: 'dark' ,mode: 'logout' }); -%>
+  <body>
+    <%- include('./layout/header',{type: 'dark' ,mode: 'logout' }); -%>
     <main class="site-index">
       <div class="site-index__banner">
         <div
@@ -239,11 +239,53 @@
         </div>
       </section>
 
+      <section class="section__features py-10 py-md-20">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-4 section__features-card d-flex mb-6">
+              <div class="flex-grow-1 p-5 p-lg-7 bg-secondary-60 text-white features-card__content">
+                <h2 class="mb-2 fs-base fs-lg-h5 fw-bold">豐富的商品種類</h2>
+                <p class="mb-2 fs-sm fs-lg-base fw-normal">
+                  從潮流單品到經典款式
+                  <br />
+                  應有盡有
+                </p>
+                <p class="features-card__title font-dm-serif fst-italic fs-h3 fs-lg-dh1 opacity-60">SHOP</p>
+              </div>
+              <img class="section__features-img" src="/assets/images/features-img-1.png" alt="" />
+            </div>
+            <div class="col-12 col-lg-4 section__features-card d-flex mb-6">
+              <div class="flex-grow-1 p-5 p-lg-7 bg-primary-80 text-white features-card__content">
+                <h2 class="mb-2 fs-base fs-lg-h5 fw-bold">優惠的代購價格</h2>
+                <p class="mb-2 fs-sm fs-lg-base fw-normal">
+                  批量採購
+                  <br />
+                  為您節省更多
+                </p>
+                <p class="features-card__title font-dm-serif fst-italic fs-h3 fs-lg-dh1 opacity-60">SAVE</p>
+              </div>
+              <img class="section__features-img" src="/assets/images/features-img-2.png" alt="" />
+            </div>
+            <div class="col-12 col-lg-4 section__features-card d-flex mb-6">
+              <div class="flex-grow-1 p-5 p-lg-7 bg-nature-50 text-white features-card__content">
+                <h2 class="mb-2 fs-base fs-lg-h5 fw-bold">便捷的購物體驗</h2>
+                <p class="mb-2 fs-sm fs-lg-base fw-normal">
+                  從選購到收貨
+                  <br />
+                  全程輕鬆無憂
+                </p>
+                <p class="features-card__title font-dm-serif fst-italic fs-h3 fs-lg-dh1 opacity-60">FAST</p>
+              </div>
+              <img class="section__features-img" src="/assets/images/features-img-3.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <%- include('./layout/footer'); -%>
 
-      <script type="module" src="../main.js"></script>
-      <script type="module" src="/assets/js/index.js"></script>
-</body>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="/assets/js/index.js"></script>
+  </body>
 
 </html>
