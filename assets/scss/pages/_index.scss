@@ -176,6 +176,40 @@
       }
     }
   }
+
+  &__features {
+    &-card {
+      position: relative;
+      @include media-breakpoint-up(lg) {
+        height: 320px;
+      }
+    }
+    .features-card__content {
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        width: 273px;
+        height: 320px;
+        padding: 28px;
+      }
+    }
+    &-img {
+      object-fit: cover;
+      width: 123px;
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 224px;
+        height: 210px;
+      }
+    }
+    .features-card__title {
+      @include media-breakpoint-up(lg) {
+        display: inline-block;
+        transform: rotate(90deg) translate(40px, 50px);
+      }
+    }
+  }
 }
 
 .swiper__productCategories {
