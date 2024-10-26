@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品總覽</title>
+</head>
+<body>
+    <%- include('./layout/header',{type: 'dark' ,mode: 'logout' }); -%>
+    <section class="productList-section bg-nature-99">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 d-none d-md-block">
+                    <!-- 類別篩選選單 -->
+                </div>
+                <div class="col-12 col-md-9 d-block">
+                    <div class="mb-4 mb-md-10 d-flex justify-content-between">
+                        <h3 class="mt-4">女裝 商品一覽</h3>
+                    </div>
+                    <div class="row productList-card-wrap g-6">
+                        <!-- 透過選擇器 productList-card-wrap 設定卡片 -->
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/productList.js"></script>
+    <script type="module" src="../assets/js/productList_favorite.js"></script>
+</body>
+</html>
