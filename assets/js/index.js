@@ -35,3 +35,18 @@ productCategoriesContainer.forEach((item) => {
     }
   );
 });
+// const swiperComment = new Swiper('.swiper__comment', {
+//   loop: true,
+//   breakpoints: {
+//     576: {
+//       slidesPerView: 2,
+//     },
+//     768: {
+//       slidesPerView: 3,
+//     },
+//     992: {
+//       slidesPerView: 4,
+//     },
+//   },
+//   spaceBetween: 24,
+// });
