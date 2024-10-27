@@ -179,8 +179,20 @@
     margin-left: auto;
 }
 
+.sortList .dropdown-toggle:hover {
+  background-color:white;
+  color:black;
+}
+
+/* 保持顏色不變 */
+.sortList .dropdown-toggle:focus,
+.sortList .dropdown-toggle:active {
+  background-color: white; /* 或使用其他你想要的顏色 */
+  color: black; /* 或使用其他你想要的顏色 */
+}
+
 .dropdown-menu-product .dropdown-item:hover,
 .dropdown-menu-product .dropdown-item:focus {
-    background-color:rgba(108, 117, 125, 0.5); // #6c757d;
+    background-color:rgba(198, 207, 215, 0.854);
     color: black;
 }
