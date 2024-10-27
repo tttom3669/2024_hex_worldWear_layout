@@ -64,35 +64,35 @@ const productListCardList = [
         status: '',
         price: 'NTD.690',
         discountPrice:''
-      },
-      {
-        productName: '素雅亞麻長褲',
-        img: 'product_009.png',
-        status: '',
-        price: 'NTD.690',
-        discountPrice:''
-      },
-      {
-        productName: '素雅亞麻長褲',
-        img: 'product_009.png',
-        status: '',
-        price: 'NTD.690',
-        discountPrice:''
-      },
-      {
-        productName: '素雅亞麻長褲',
-        img: 'product_009.png',
-        status: '',
-        price: 'NTD.690',
-        discountPrice:''
-      },
-      {
-        productName: '素雅亞麻長褲',
-        img: 'product_009.png',
-        status: '',
-        price: 'NTD.690',
-        discountPrice:''
       }
+      // ,{
+      //   productName: '素雅亞麻長褲',
+      //   img: 'product_009.png',
+      //   status: '',
+      //   price: 'NTD.690',
+      //   discountPrice:''
+      // },
+      // {
+      //   productName: '素雅亞麻長褲',
+      //   img: 'product_009.png',
+      //   status: '',
+      //   price: 'NTD.690',
+      //   discountPrice:''
+      // },
+      // {
+      //   productName: '素雅亞麻長褲',
+      //   img: 'product_009.png',
+      //   status: '',
+      //   price: 'NTD.690',
+      //   discountPrice:''
+      // },
+      // {
+      //   productName: '素雅亞麻長褲',
+      //   img: 'product_009.png',
+      //   status: '',
+      //   price: 'NTD.690',
+      //   discountPrice:''
+      // }
 ];
 
 if (productListCard) {

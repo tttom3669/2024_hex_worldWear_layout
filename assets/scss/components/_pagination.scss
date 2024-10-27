@@ -1,0 +1,26 @@
+.pagination {
+  .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: black;
+    border: 1px solid #ccc;
+    background-color: #f8f9fa;
+    border-radius: 0; /* 去除圓角 */
+    transition: border-color 0.3s; /* 增加過渡效果 */
+
+    &:hover, &:focus {
+      --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(202, 216, 240, 0.641);
+      background-color: #e2e6ea;
+      outline: none; /* 去除預設的焦點輪廓 */
+    }
+
+    /* 當前頁 */
+    &.active {
+      background-color: black;
+      color: white;
+    }
+  }
+}

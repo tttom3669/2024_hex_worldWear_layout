@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <title>商品總覽</title>
   </head>
   <body>
@@ -62,6 +63,10 @@
             <!-- 商品卡片 -->
             <div class="row productList-card-wrap g-6">
               <!-- 透過選擇器 productList-card-wrap 設定卡片 -->
+            </div>
+            <!-- 分頁 -->
+            <div class="d-flex justify-content-center mt-8 mt-md-16">
+              <%- include('./layout/pagination'); -%>
             </div>
           </div>
         </div>
