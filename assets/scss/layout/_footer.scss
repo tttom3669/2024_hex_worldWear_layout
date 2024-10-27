@@ -75,8 +75,9 @@
 
 .topBtn{
     position: fixed;
-    bottom: 258px;  /* 距離視口底部 10px */
-    right: 196px;   /* 距離視口右側 20px */
+    bottom: 258px; 
+    right: 196px;   
+    z-index:20;
 }
 
 
