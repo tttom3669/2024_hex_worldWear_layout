@@ -10,7 +10,11 @@
 // layout
 @import './layout/layout';
 @import './layout/cartFlow.scss';
+
 // components
 @import './components/components';
+@import './components/pagination';
+
 // pages
 @import './pages/pages';
+@import './pages/productList';
