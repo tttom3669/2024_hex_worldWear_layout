@@ -239,6 +239,62 @@
         </div>
       </section>
 
+      <section class="py-10 py-md-20 bg-nature-95 bg-md-nature-99">
+        <div class="container-sm">
+          <h2 class="fs-h5 fs-md-h2 fw-bold mb-6">熱門商品</h2>
+          <div class="swiper-container swiper__popularProducts-container">
+            <div class="swiper swiper__popularProducts">
+              <div class="swiper-wrapper">
+                <% for(let i=0; i<2; i++) {%>
+                  <div class="swiper-slide position-relative">
+                    <img class="w-100 img-fluid object-fit-cover mb-3" src="/assets/images/popular-product-1.png"
+                      alt="popular-product-1">
+                    <a href="#" class="stretched-link link-black">
+                      <h3 class="d-flex flex-column gap-0 gap-md-1 tracking-sm fs-sm fs-md-base lh-base fw-normal">
+                        <span> HOKA Speedgoat 5 Mid</span>
+                        <span>GORE-TEX 男鞋 藍色/琥珀色</span>
+                      </h3>
+                    </a>
+                  </div>
+                  <div class="swiper-slide position-relative">
+                    <img class="w-100 img-fluid object-fit-cover  mb-3" src="/assets/images/popular-product-2.png"
+                      alt="popular-product-3">
+                    <a href="#" class="stretched-link link-black">
+                      <h3 class="d-flex flex-column gap-0 gap-md-1 tracking-sm fs-sm fs-md-base lh-base fw-normal">
+                        <span> 韓國連線 七月新品 EU27</span>
+                        <span>帆布皮帶側開叉牛仔長裙</span>
+                      </h3>
+                    </a>
+                  </div>
+                  <div class="swiper-slide position-relative">
+                    <img class="w-100 img-fluid object-fit-cover mb-3" src="/assets/images/popular-product-3.png"
+                      alt="popular-product-3">
+                    <a href="#" class="stretched-link link-black">
+                      <h3 class="d-flex flex-column gap-0 gap-md-1 tracking-sm fs-sm fs-md-base lh-base fw-normal">
+                        <span>TABBY26號新縫單肩手袋</span>
+                        <span>B4/黑色（CP150）</span>
+                      </h3>
+                    </a>
+                  </div>
+                  <% }%>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-prev">
+              <svg width="18" height="32">
+                <use href="/assets/images/prev.svg#prev"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-next">
+              <svg width="18" height="32">
+                <use href="/assets/images/next.svg#next"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
       <section class="section__features py-10 py-md-20">
         <div class="container">
           <div class="row">

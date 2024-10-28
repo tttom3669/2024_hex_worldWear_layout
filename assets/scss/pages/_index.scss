@@ -254,3 +254,20 @@
     }
   }
 }
+
+.swiper__popularProducts {
+  .swiper-slide {
+    img {
+      aspect-ratio: 257/248;
+      @include media-breakpoint-up(md) {
+        aspect-ratio: 416/ 400;
+      }
+    }
+  }
+  &-container {
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: 32.7%;
+    }
+  }
+}

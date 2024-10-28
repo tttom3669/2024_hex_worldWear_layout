@@ -47,12 +47,14 @@
       }
     }
     .swiper-button-prev {
+      left: 0;
       @include media-breakpoint-up(lg) {
         right: calc(100% + 12px);
         left: unset;
       }
     }
     .swiper-button-next {
+      right: 0;
       @include media-breakpoint-up(lg) {
         right: unset;
         left: calc(100% + 12px);
