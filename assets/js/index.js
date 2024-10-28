@@ -13,12 +13,15 @@ productCategoriesContainer.forEach((item) => {
       slidesPerView: 1.375,
       breakpoints: {
         576: {
+          slidesPerGroup: 2,
           slidesPerView: 2,
         },
         768: {
+          slidesPerGroup: 3,
           slidesPerView: 3,
         },
         992: {
+          slidesPerGroup: 4,
           slidesPerView: 4,
         },
       },
@@ -35,18 +38,32 @@ productCategoriesContainer.forEach((item) => {
     }
   );
 });
-// const swiperComment = new Swiper('.swiper__comment', {
-//   loop: true,
-//   breakpoints: {
-//     576: {
-//       slidesPerView: 2,
-//     },
-//     768: {
-//       slidesPerView: 3,
-//     },
-//     992: {
-//       slidesPerView: 4,
-//     },
-//   },
-//   spaceBetween: 24,
-// });
+
+const swiperPopularProducts = new Swiper('.swiper__popularProducts', {
+  modules: [Navigation, Pagination],
+  // loop: true,
+  slidesPerView: 1.375,
+  breakpoints: {
+    576: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+    },
+  },
+  spaceBetween: 24,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: document.querySelector(
+      '.swiper__popularProducts-container .swiper-button-next'
+    ),
+    prevEl: document.querySelector(
+      '.swiper__popularProducts-container .swiper-button-prev'
+    ),
+  },
+});
