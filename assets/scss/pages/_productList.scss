@@ -4,65 +4,65 @@
 }
 
 @media (max-width: 576px) {
-    .productList-section {
-        margin-top: 76px;
-      }
+  .productList-section {
+    margin-top: 76px;
+  }
 }
 
 .productList-card .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加過渡效果 */
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加過渡效果 */
 }
 
 .productList-card .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top.mask {
-    opacity: 0.5;
-    transition: opacity 0.3s;
-  }
-  
-  .card-img-overlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 75%;
-    //   height: calc(100% - 128px); /* 填滿父元素高度 */
-    width: 100%;
-  }
-  
-  .img-wrapper {
-    height: 280px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  width: 100%;
+}
+
+.img-wrapper {
+  height: 280px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .productList-card .card .img-wrapper {
+    height: 250px; /* 設定小型設備上的圖片容器高度 */
   }
 
-  @media (max-width: 576px) {
-    .productList-card .card .img-wrapper {
-      height: 250px; /* 設定小型設備上的圖片容器高度 */
-    }
+  .productList-card .card .img-wrapper img {
+    height: 100%; /* 確保圖片填滿容器 */
+    object-fit: cover; /* 確保圖片按比例顯示 */
+  }
+}
 
-    .productList-card .card .img-wrapper img {
-      height: 100%; /* 確保圖片填滿容器 */
-      object-fit: cover; /* 確保圖片按比例顯示 */
-    }
-  }
-  
-  .card-img-top {
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-  }
-  
-  .discountText {
-    color: $gray-500;
-    margin-right: 4px;
-    text-decoration: line-through;
-  }
+.card-img-top {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.discountText {
+  color: $gray-500;
+  margin-right: 4px;
+  text-decoration: line-through;
+}
 
 .productList-category-tag {
   border-radius: 0 4px 4px 0;
@@ -96,93 +96,121 @@
 }
 
 .btn-outline-danger {
-  --bs-btn-color: #93908F; 
+  --bs-btn-color: #93908f;
   --bs-btn-bg: white;
-  --bs-btn-border-color: #93908F;
+  --bs-btn-border-color: #93908f;
 }
 
 .favorite {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   position: relative; /* 用於定位 */
   padding: 0; /* 移除內邊距 */
   transition: border-color 0.3s, background-color 0.3s; /* 平滑過渡 */
   border: 2px solid rgba(255, 255, 255, 0.5);
-  background-color: transparent; 
+  background-color: transparent;
   display: block;
 }
 
-.favorite-button{
-    width: 40px;
-    height: 40px;
-    position: relative; /* 用於定位 */
-    padding: 0; /* 移除內邊距 */
-    border: none;
-    transition: background-color 0.3s, border-color 0.3s; /* 平滑過渡 */
-    background-color: rgba(255, 255, 255, 0.6); /* 預設背景透明 */
-    display: block;
+.favorite-button {
+  width: 40px;
+  height: 40px;
+  position: relative; /* 用於定位 */
+  padding: 0; /* 移除內邊距 */
+  // border: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: background-color 0.3s, border-color 0.3s; /* 平滑過渡 */
+  background-color: rgba(255, 255, 255, 0.6); /* 預設背景透明 */
+  display: block;
 }
 
-.favorite:hover, .favorite-button:hover {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(211, 211, 211, 0.6); /* hover 時的背景顏色 */
-    border-color: white;
-    color: #93908F;
-  }
-  
-  .favorite.isLike, .favorite-button.isLike {
-    width: 40px;
-    height: 40px;
-    background-color:#f14e3a;
-    border-color: #f14e3a; /* 選取時的邊框顏色 */
-  }
-  
-  .favorite.isLike .heartIcon,
-  .favorite-button.isLike .heartIcon-button {
-    fill: white;
-  }
-  
-  @media (max-width: 576px) {
-    .favorite {
-      display: none;
-    }
-    
-    .favorite-div {
-      display: block;
-    }
-  }
-  
-  @media (min-width: 577px) {
-    .favorite-div {
-      display: none;
-    }
+.favorite:hover,
+.favorite-button:hover {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(211, 211, 211, 0.6); /* hover 時的背景顏色 */
+  border-color: white;
+  color: #93908f;
+}
+
+.favorite.isLike,
+.favorite-button.isLike {
+  width: 40px;
+  height: 40px;
+  background-color: #f14e3a;
+  border-color: #f14e3a; /* 選取時的邊框顏色 */
+}
+
+@media (max-width: 576px) {
+  .favorite-button {
+    width: 32px;
+    height: 32px;
   }
 
+  .favorite:hover,
+  .favorite-button:hover {
+    width: 32px;
+    height: 32px;
+  }
+
+  .favorite:hover,
+  .favorite-button:hover {
+    width: 32px;
+    height: 32px;
+  }
+
+  .favorite.isLike,
+  .favorite-button.isLike {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.favorite.isLike .heartIcon,
+.favorite-button.isLike .heartIcon-button {
+  fill: white;
+}
+
+@media (max-width: 576px) {
+  .favorite {
+    display: none;
+  }
+
+  .favorite-div {
+    display: block;
+  }
+}
+
+@media (min-width: 577px) {
+  .favorite-div {
+    display: none;
+  }
+}
+
 .sortList button {
-    width: 148px;
-    background-color: white;
+  width: 148px;
+  background-color: white;
 }
 
 .sortList .dropdown-menu {
-    border-radius: 0;
-    min-width: 148px; /* 確保下拉選單的最小寬度與按鈕一致 */
+  border-radius: 0;
+  min-width: 148px; /* 確保下拉選單的最小寬度與按鈕一致 */
 }
 
 /*將選單的箭頭推至最右*/
 .sortList .dropdown-toggle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sortList .dropdown-toggle::after {
-    margin-left: auto;
+  margin-left: auto;
 }
 
 .sortList .dropdown-toggle:hover {
-  background-color:white;
-  color:black;
+  background-color: white;
+  color: black;
 }
 
 /* 保持顏色不變 */
@@ -194,6 +222,48 @@
 
 .dropdown-menu-product .dropdown-item:hover,
 .dropdown-menu-product .dropdown-item:focus {
-    background-color:rgba(198, 207, 215, 0.854);
-    color: black;
+  background-color: rgba(198, 207, 215, 0.854);
+  color: black;
+}
+
+.selectButton {
+  width: 139px;
+  height: 56px;
+  background-color: #ffb962;
+}
+
+.selectButton h6 {
+  text-align: left;
+}
+
+.checkItem {
+  margin: 12px;
+  min-width: 100%;
+  background-color: #ffb962;
+}
+
+.offcanvas {
+  background-color: #ffffff;
+
+  &-fullscreen {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border: none;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-body {
+    padding: 0; /* 移除內邊距，讓內容佔滿版面 */
+  }
+}
+
+.offcanvasClose {
+  margin-left: auto;
 }

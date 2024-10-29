@@ -1,44 +1,43 @@
 .navCategory {
-  background-color: #ffffff; /* 設定背景顏色為白色 */
-  // padding: 16px;
+  background-color: #ffffff;
   border: 1px solid #dee2e6;
 }
 
+.category-item .accordion-header:active {
+  background-color: gary;
+}
+
+.category-item .accordion-header:focus {
+  background-color: gary;
+}
+
+.category-item .accordion-header:active {
+  background-color: gary;
+}
+
+.category-item .accordion-header:focus {
+  background-color: gary;
+}
+
 .category-button {
-  background-color: transparent; /* 背景透明 */
-  border: none; /* 無邊框 */
-  border-bottom: 2px solid #f1f0f0e1;
-  padding: 16px 0;
+  padding: 16px;
   text-align: left; /* 文本左對齊 */
-  width: 100%; /* 滿寬 */
-}
-
-.category-button h6 {
-  padding-left: 16px;
-}
-
-.category-button span {
-  margin-right: 16px;
+  border-radius: 0;
 }
 
 .category-button:hover {
   background-color: #f8f9fa; /* 鼠標懸停時的背景顏色 */
 }
 
-.category-divider {
-  margin: 0; /* 清除上下邊距 */
-  border: 1px solid #dee2e6; /* 水平線的顏色和寬度 */
+.category-button:not(.collapsed) {
+  background-color: rgba(198, 207, 215, 0.6);
 }
 
-.category-body {
-  padding-top: 16px;
-  padding-left: 16px;
-  // margin-right: 12px;
-}
-
-.category-body label {
-  margin-right: 12px;
-  margin-bottom: 8px;
+.category-button:focus {
+  outline: none; /* 去除默認焦點輪廓 */
+  box-shadow: 0 0 5px rgba(198, 207, 215, 0.6); /* 設定陰影顏色和大小 */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .btn-outline-primary,
@@ -74,26 +73,8 @@
   background: #000000;
 }
 
-.offcanvas {
-  background-color: #ffffff; /* 或者其他顏色 */
-}
-
 @media (max-width: 576px) {
-  .category-body {
-    padding-left: 8px; /* 減少邊距 */
-    padding-top: 8px;
-  }
-
   .category-button {
-    padding: 12px 0; /* 調整按鈕的內邊距 */
+    padding: 16px; /* 調整按鈕的內邊距 */
   }
-}
-
-/* 將 Offcanvas 設置為全屏 */
-.offcanvas-fullscreen {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  border: none;
 }
