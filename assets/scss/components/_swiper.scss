@@ -48,14 +48,14 @@
     }
     .swiper-button-prev {
       left: 0;
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xxl) {
         right: calc(100% + 12px);
         left: unset;
       }
     }
     .swiper-button-next {
       right: 0;
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xxl) {
         right: unset;
         left: calc(100% + 12px);
       }
