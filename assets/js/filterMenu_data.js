@@ -68,28 +68,52 @@ const categoriesData = [
   },
 ];
 
-// 渲染類別選單
-if (categoryMenuItem) {
-  categoryMenuRender(categoryMenuItem, categoriesData);
-} else {
-  console.error("categoryMenuItem element not found");
+// 根據螢幕大小調整 id 並渲染類別選單
+function adjustOptionIdsAndRender(categories, menuItem, offcanvasItem) {
+  const isSmallScreen = window.matchMedia("(max-width: 576px)").matches;
+
+  categories.forEach((category) => {
+    category.options.forEach((option) => {
+      // 根據螢幕大小調整 id
+      if (isSmallScreen) {
+        if (!option.id.endsWith('-sm')) {
+          option.id = `${option.id}-sm`; // 為小型設備添加後綴
+        }
+      } else {
+        option.id = option.id.replace(/-sm$/, ''); // 移除後綴
+      }
+    });
+  });
+
+  // 渲染類別選單
+  if (menuItem) {
+    categoryMenuRender(menuItem, categories);
+  } else {
+    console.error("menuItem element not found");
+  }
+
+  // 渲染類別選單到 offcanvas
+  if (offcanvasItem) {
+    categoryMenuRender(offcanvasItem, categories);
+  } else {
+    console.error("offcanvasItem element not found");
+  }
 }
 
-// 渲染類別選單到 offcanvas
-if (offcanvasFilterMenuWrap) {
-  categoryMenuRender(offcanvasFilterMenuWrap, categoriesData);
-} else {
-  console.error("offcanvasFilterMenuWrap element not found");
-}
+// 初始渲染
+adjustOptionIdsAndRender(categoriesData, categoryMenuItem, offcanvasFilterMenuWrap);
+
+// 監聽螢幕大小變化
+window.addEventListener('resize', () => {
+  adjustOptionIdsAndRender(categoriesData, categoryMenuItem, offcanvasFilterMenuWrap);
+});
 
 // 監聽 offcanvas 開啟事件
 const offcanvasElement = document.getElementById("offcanvasCategoryMenu");
 offcanvasElement.addEventListener("show.bs.offcanvas", function () {
-  // 隱藏 header
   document.getElementById("header-container").style.display = "none";
 });
 
 offcanvasElement.addEventListener("hidden.bs.offcanvas", function () {
-  // 重新顯示 header
   document.getElementById("header-container").style.display = "block";
 });

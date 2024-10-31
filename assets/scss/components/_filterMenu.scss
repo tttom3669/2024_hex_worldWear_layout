@@ -11,26 +11,19 @@
   background-color: gary;
 }
 
-.category-item .accordion-header:active {
-  background-color: gary;
-}
-
-.category-item .accordion-header:focus {
-  background-color: gary;
-}
-
 .category-button {
   padding: 16px;
-  text-align: left; /* 文本左對齊 */
+  text-align: left;
   border-radius: 0;
 }
 
 .category-button:hover {
+  color: black;
   background-color: #f8f9fa; /* 鼠標懸停時的背景顏色 */
 }
 
 .category-button:not(.collapsed) {
-  background-color: rgba(198, 207, 215, 0.6);
+  background-color: #f8f9fa;
 }
 
 .category-button:focus {
@@ -40,41 +33,84 @@
   border-top-right-radius: 0;
 }
 
-.btn-outline-primary,
-.btn-outline-special {
-  color: #212121;
-  border-color: #bbbbbb;
-  border-width: 1px;
-}
+@media (max-width: 576px) {
+  .navCategory,
+  .accordion-item {
+    border: none;
+  }
 
-.btn.btn-outline-primary:active,
-.btn.btn-outline-primary:checked {
-  color: white;
-  background-color: black;
-}
+  .accordion-header {
+    border-top: 1px solid #dee2e6;
+  }
 
-.btn.btn-outline-primary:hover {
-  color: black;
-  background-color: rgba(198, 207, 215, 0.6);
-  border-color: black;
+  .category-button {
+    padding: 16px;
+  }
 }
 
 .btn-check {
-  display: none;
+  opacity: 0;  /* 使 checkbox 隱形 */
+  position: absolute;  /* 使其不影響布局 */
+  pointer-events: none;  /* 這樣無法直接點擊 checkbox */
 }
 
-.btn-check:checked + .input-btn,
-.btn-check:focus + .input-btn,
-.input-btn:first-child:active,
-.input-btn.active,
-.input-btn.show {
-  border: 1px solid #000000;
-  color: #ffffff;
-  background: #000000;
+.category-subItem .btn-outline-primary {
+  pointer-events: auto;  /* 確保 label 可以被點擊 */
 }
 
-@media (max-width: 576px) {
-  .category-button {
-    padding: 16px; /* 調整按鈕的內邊距 */
+.category-subItem .btn-outline-primary {
+  --bs-btn-color: black; /* 文字顏色 */
+  --bs-btn-border-color: black; /* 邊框顏色 */
+  --bs-btn-hover-color: black; /* 懸停時文字顏色 */
+  --bs-btn-hover-bg: #f8f9fa; /* 懸停時背景顏色 */
+  --bs-btn-hover-border-color: rgba(187, 187, 187, 0.738); /* 懸停時邊框顏色 */
+  --bs-btn-active-color: #fff; /* 點擊時文字顏色 */
+  --bs-btn-active-bg: black; /* 點擊時背景顏色 */
+  --bs-btn-active-border-color: black; /* 點擊時邊框顏色 */
+  transition: background-color 0.3s ease; /* 平滑過渡效果 */
+}
+
+.category-subItem .btn-outline-primary:hover,
+.category-subItem .btn-outline-primary:active {
+  color: var(--bs-btn-active-color);
+  background-color: var(--bs-btn-active-bg);
+}
+
+.offcanvas {
+  background-color: #ffffff;
+
+  &-fullscreen {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border: none;
   }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-body {
+    padding: 0; /* 移除內邊距，讓內容佔滿版面 */
+  }
+}
+
+.offcanvasClose {
+  margin-left: auto;
+}
+
+.checkItem {
+  height: 56px;
+  min-width: 100%;
+  background-color: #ffb962;
+  border: none;
+}
+
+.checkItem:hover,
+.offcanvasClose:hover {
+  color: #000;
+  background-color: #c88119;
 }

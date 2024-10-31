@@ -8,7 +8,8 @@ favoriteIcons.forEach((item) => {
         item.classList.add("isLike");
     }
 
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (e) => {
+        e.preventDefault(); // 防止觸發連結
         isFavorite = !isFavorite;
         item.setAttribute("data-favorite", isFavorite);
 
@@ -35,7 +36,8 @@ favoriteIcons_s.forEach((item) => {
         item.classList.add("isLike");
     }
 
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (e) => {
+        e.preventDefault(); // 防止觸發連結
         isFavorite = !isFavorite;
         item.setAttribute("data-favorite", isFavorite);
 
