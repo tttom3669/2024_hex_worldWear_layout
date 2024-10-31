@@ -35,12 +35,18 @@
                 <li><a class="dropdown-item" href="#">價格由高至低</a></li>
               </ul>
             </div>
+
             <!-- 手機版 -->
             <div class="d-md-none w-100 mt-4 text-end">
               <div class="d-flex justify-content-between align-items-center">
                 <button class="btn btn-outline-primary selectButton ps-4" type="button" data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasCategoryMenu" aria-controls="offcanvasCategoryMenu">
-                  <h6>篩選</h6>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h6>篩選</h6>
+                    <span class="dropdown-icon">
+                      <img src="/assets/images/icon/dropdownIcon.svg" alt="dropdown-Icon">
+                    </span>
+                </div>
                 </button>
                 <div class="sortList fs-6">
                   <button type="button" class="btn btn-outline-secondary dropdown-toggle text-start"
@@ -61,6 +67,7 @@
               </div>
             </div>
           </div>
+
           <!-- 商品卡片 -->
           <div class="row productList-card-wrap g-6">
             <!-- 透過選擇器 productList-card-wrap 設定卡片 -->
@@ -77,16 +84,16 @@
   <!-- Offcanvas 組件 -->
   <div class="offcanvas offcanvas-fullscreen" tabindex="-1" id="offcanvasCategoryMenu"
     aria-labelledby="offcanvasCategoryMenuLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title me-4" id="offcanvasCategoryMenuLabel"></h5>
+    <div class="offcanvas-header pe-3">
+      <h5 class="offcanvas-title" id="offcanvasCategoryMenuLabel"></h5>
       <button type="button" class="btn btn-outline-secondary offcanvasClose" data-bs-dismiss="offcanvas"
         aria-label="Close">
         取消
       </button>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body ps-3 pe-3">
       <div class="filterMenu-wrap"></div>
-      <div class="me-3"><button class="checkItem">查看品項</button></div>
+      <div><button class="checkItem"><h6>查看品項</h6></button></div>
     </div>
   </div>
 
