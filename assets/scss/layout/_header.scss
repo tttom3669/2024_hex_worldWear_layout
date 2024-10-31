@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   z-index: 1100;
-  transition: background-color ease 0.3s;
+  transition: background-color ease 0.2s, top linear 0.1s;
   @include media-breakpoint-up(lg) {
     top: $header-aside-height;
   }
