@@ -28,8 +28,8 @@ export function productRender(productListCard, productList) {
                     </div>
                   </div>
                   <div class="card-img-overlay text-white ${shouldHide ? '' : 'd-none'}">
-                    <h5 class="card-title">Soldout</h5>
-                    <p class="card-text">已售完</p>
+                    <h3 class="card-title fst-italic font-dm-serif">Soldout</h5>
+                    <p class="card-text"><h5>已售完</h5></p>
                   </div>
                   <div class="${statusClassNames} position-absolute opacity-70 ">
                       <span class="me-1">${item.status}</span>

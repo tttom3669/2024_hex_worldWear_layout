@@ -1,6 +1,5 @@
 .navCategory {
   background-color: #ffffff;
-  border: 1px solid #dee2e6;
 }
 
 .category-item .accordion-header:active {
@@ -12,25 +11,47 @@
 }
 
 .category-button {
-  padding: 16px;
-  text-align: left;
   border-radius: 0;
 }
 
 .category-button:hover {
   color: black;
-  background-color: #f8f9fa; /* 鼠標懸停時的背景顏色 */
+  background-color: white; //#f8f9fa
 }
 
 .category-button:not(.collapsed) {
-  background-color: #f8f9fa;
+  background-color: white;  //#f8f9fa;
 }
 
 .category-button:focus {
   outline: none; /* 去除默認焦點輪廓 */
-  box-shadow: 0 0 5px rgba(198, 207, 215, 0.6); /* 設定陰影顏色和大小 */
+  box-shadow: 0 0 5px white; /* 設定陰影顏色和大小 */
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+// /* 類別篩選選單 */
+.navCategory,
+.accordion-item {
+  border: none;
+}
+
+.navCategory
+ {
+  border-top: 1px solid #E5E2E0;
+  border-bottom: 1px solid #E5E2E0;
+  border-inline-end: 1px solid #E5E2E0;
+  border-inline-start: 1px solid #E5E2E0;
+}
+
+.category-button {
+  border-top: 1px solid #E5E2E0;
+  border-bottom: 1px solid #E5E2E0;
+}
+
+.accordion-header{
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 @media (max-width: 576px) {
@@ -49,13 +70,13 @@
 }
 
 .btn-check {
-  opacity: 0;  /* 使 checkbox 隱形 */
-  position: absolute;  /* 使其不影響布局 */
-  pointer-events: none;  /* 這樣無法直接點擊 checkbox */
+  opacity: 0; /* 使 checkbox 隱形 */
+  position: absolute; /* 使其不影響布局 */
+  pointer-events: none; /* 這樣無法直接點擊 checkbox */
 }
 
 .category-subItem .btn-outline-primary {
-  pointer-events: auto;  /* 確保 label 可以被點擊 */
+  pointer-events: auto; /* 確保 label 可以被點擊 */
 }
 
 .category-subItem .btn-outline-primary {

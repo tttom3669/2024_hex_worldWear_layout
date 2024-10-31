@@ -13,7 +13,7 @@ export function categoryMenuRender(categoryMenuItem, categoriesData) {
         str += `
               <div class="accordion-item category-item">
                   <h2 class="accordion-header" id="heading-${index + 1}">
-                      <button class="accordion-button category-button ${index === 0 ? '' : 'collapsed'}" type="button"
+                      <button class="ps-0 pe-0 accordion-button category-button ${index === 0 ? '' : 'collapsed'}" type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#${collapseId}"
                               aria-expanded="${index === 0 ? 'true' : 'false'}"
@@ -24,7 +24,7 @@ export function categoryMenuRender(categoryMenuItem, categoriesData) {
                   <div id="${collapseId}"
                        class="accordion-collapse collapse ${index === 0 ? 'show' : ''}"
                        aria-labelledby="heading-${index + 1}">
-                  <div class="accordion-body mb-2 d-flex text-nowrap flex-wrap gap-2 category-subItem">`;
+                  <div class="accordion-body d-flex text-nowrap flex-wrap gap-2 category-subItem">`;
 
         category.options.forEach((option) => {
             str += `

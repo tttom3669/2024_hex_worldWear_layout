@@ -14,6 +14,11 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加過渡效果 */
 }
 
+.productList-card .card-title,
+.productList-card .card-text h5 {
+  font-weight: 400;
+}
+
 .productList-card .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -91,10 +96,6 @@
   display: none;
 }
 
-.cost {
-  font-weight: 700px;
-}
-
 .btn-outline-danger {
   --bs-btn-color: #93908f;
   --bs-btn-bg: white;
@@ -102,8 +103,8 @@
 }
 
 .favorite {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   position: relative; /* 用於定位 */
   padding: 0; /* 移除內邊距 */
   border: 1px solid rgba(241, 240, 240, 1);
@@ -113,8 +114,8 @@
 }
 
 .favorite-button {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   position: relative; /* 用於定位 */
   padding: 0; /* 移除內邊距 */
   border: 1px solid rgba(241, 240, 240, 1);
@@ -125,8 +126,8 @@
 
 .favorite:hover,
 .favorite-button:hover {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background-color: rgba(211, 211, 211, 0.6); /* hover 時的背景顏色 */
   border-color: rgba(211, 211, 211, 0.6);
   color: #93908f;
@@ -134,34 +135,34 @@
 
 .favorite.isLike,
 .favorite-button.isLike {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background-color: #f14e3a;
   border-color: #f14e3a; /* 選取時的邊框顏色 */
 }
 
 @media (max-width: 576px) {
   .favorite-button {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
   }
 
   .favorite:hover,
   .favorite-button:hover {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
   }
 
   .favorite:hover,
   .favorite-button:hover {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
   }
 
   .favorite.isLike,
   .favorite-button.isLike {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
   }
 }
 
