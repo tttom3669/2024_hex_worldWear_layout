@@ -18,15 +18,23 @@ function mainMenuHandler() {
   const searchBar = document.querySelector(`.header__searchBar-container`);
 
   // 手機版選單 icon 切換 (未登入)
-  const toggleCollapseBtn = function () {
+  const toggleCollapseBtn = function (type) {
     // 登出時手機版選單，點擊會更換 icon
     if (!collapseBtn.classList.contains('l-menu__collapse-btn--login')) {
       const svgList = collapseBtn.querySelector('.header--logout__item')
         .children[0];
       const svgClose = collapseBtn.querySelector('.header--logout__item')
         .children[1];
-      svgList.classList.toggle('d-none');
-      svgClose.classList.toggle('d-none');
+      if (type === 'close') {
+        svgList.classList.remove('d-none');
+        svgClose.classList.add('d-none');
+      } else if ('add') {
+        svgList.classList.add('d-none');
+        svgClose.classList.remove('d-none');
+      } else {
+        svgList.classList.toggle('d-none');
+        svgClose.classList.toggle('d-none');
+      }
     }
   };
 
@@ -47,7 +55,7 @@ function mainMenuHandler() {
     }
     if (target === 'all' || target !== collapseContent) {
       collapseContent.classList.remove('show');
-      toggleCollapseBtn();
+      toggleCollapseBtn('close');
     }
   };
 
