@@ -266,7 +266,7 @@
     color: $white;
     &:hover,
     &:has(.l-menu__link.active),
-    &:has(.l-menu__collapse.active),
+    &:has(.l-menu__collapse.show),
     &:has(.header__searchBar-container.show) {
       background-color: $white;
       color: $black;
