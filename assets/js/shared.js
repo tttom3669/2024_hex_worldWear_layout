@@ -182,7 +182,7 @@ function topBtnGsap() {
   ScrollTrigger.create({
     trigger: main,
     start: '80% 70%',
-    markers: true,
+    // markers: true,
     onEnter: () => {
       // 向下滾動到達時移除 class
       topBtn.classList.remove('opacity-0');
