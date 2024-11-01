@@ -63,10 +63,14 @@
   object-fit: cover;
 }
 
-.discountText {
-  color: $gray-500;
+.listPrice {
+  color: #adaaaa;
   margin-right: 4px;
   text-decoration: line-through;
+}
+
+.discountPrice {
+  color: red;
 }
 
 .productList-category-tag {
@@ -257,4 +261,9 @@
 .selectButton:hover {
   color: #000;
   background-color: #c88119;
+}
+
+.btn-outline-primary {
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #c88119;
 }

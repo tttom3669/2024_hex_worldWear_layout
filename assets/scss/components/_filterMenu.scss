@@ -119,8 +119,20 @@
   }
 }
 
+// .offcanvas-header .btn .btn-outline-secondary {
+//   --bs-btn-hover-color: black;
+//   --bs-btn-hover-bg: #F1F0F0;
+//   --bs-btn-active-color: #000;
+//   --bs-btn-active-bg: #c88119;
+//   // --bs-btn-active-border-color: #6c757d;
+// }
+
 .offcanvasClose {
   margin-left: auto;
+  --bs-btn-hover-color: black;
+  --bs-btn-hover-bg: #F1F0F0;
+  --bs-btn-active-color: #F1F0F0;
+  --bs-btn-active-bg: #000;
 }
 
 .checkItem {
@@ -130,8 +142,7 @@
   border: none;
 }
 
-.checkItem:hover,
-.offcanvasClose:hover {
+.checkItem:hover {
   color: #000;
   background-color: #c88119;
 }
