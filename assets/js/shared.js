@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 (function init() {
   mainMenuHandler();
   headerGsap();
+  topBtnGsap();
 })();
 
 /**
@@ -166,6 +167,31 @@ function headerGsap() {
       } else {
         header.classList.add('header--light');
       }
+    },
+  });
+}
+
+/**
+ * top btn 滾動監控
+ */
+function topBtnGsap() {
+  const main = document.querySelector('main');
+  const topBtn = document.querySelector(`.topBtn`);
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.create({
+    trigger: main,
+    start: '80% 70%',
+    markers: true,
+    onEnter: () => {
+      // 向下滾動到達時移除 class
+      topBtn.classList.remove('opacity-0');
+      topBtn.classList.remove('pe-none');
+    },
+    onLeaveBack: () => {
+      // 向上滾動回來時添加 class
+      topBtn.classList.add('opacity-0');
+      topBtn.classList.add('pe-none');
     },
   });
 }
