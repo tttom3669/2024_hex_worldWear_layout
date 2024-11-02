@@ -1,6 +1,9 @@
 .pl12px{
     padding-left: 12px;
 }
+.pl20px{
+    padding-left: 20px;
+}
 
 .mb12px{
     margin-bottom: 12px;
@@ -12,6 +15,10 @@
 
 .w76{
     width: 76%;
+}
+
+.w90{
+    width: 90%;
 }
 
 .w40px{
@@ -71,9 +78,16 @@ hr {
     //background-color: rgba(168, 105, 0, 1);
 }
 
+.cartFlowDiv{
+    width: 35%;
+}
+
 @media (max-width: 768px) {
     .cartFlowTxtDiv{
-        width: 90%;
+        width: 95%;
+    }
+    .cartFlowDiv{
+        width: 40%;
     }
 }
 

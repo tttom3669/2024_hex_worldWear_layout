@@ -185,6 +185,9 @@ input[type="number"] {
     justify-content: center;
 }
 
+.estimatedcostMb{
+    margin-bottom: 16px;
+}
 
 /* 針對螢幕寬度小於等於 600px 的裝置 */
 @media (max-width: 768px) {
@@ -258,7 +261,7 @@ input[type="number"] {
     }
     
     .discountCodetxt{
-        width: 73%;
+        width: 73% !important;
         border: 1px black solid !important;
     }
 
@@ -272,7 +275,7 @@ input[type="number"] {
         flex-direction: column;
     }
 
-    .btnKeepShopping {
+    .btnCheckout {
         margin-right: 0px !important;
         margin-bottom: 12px;
     }
@@ -280,6 +283,19 @@ input[type="number"] {
     .illustrate {
         width: 100%;
         margin-top: 40px;
+    }
+
+    .estimatedcostMb{
+        margin-bottom: 8px;
+    }
+
+    .btnKeepShopping{
+        width: 100%;
+        order:1;
+    }
+    
+    .cartFlowdiv{
+        width: 41%;
     }
 
 }
