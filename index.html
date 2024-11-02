@@ -5,9 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>index</title>
-  <script type="module" crossorigin src="/2024_hex_worldWear_layout/assets/index-f7eb3795.js"></script>
-  <link rel="stylesheet" href="/2024_hex_worldWear_layout/assets/index-04fc471b.css">
+  <title>首頁 - WorldWear</title>
+  <link rel="icon" href="/2024_hex_worldWear_layout/assets/favoriteIcon-816c2deb.png" type="image/png">
+  <script type="module" crossorigin src="/2024_hex_worldWear_layout/assets/index-4b613333.js"></script>
+  <link rel="modulepreload" crossorigin href="/2024_hex_worldWear_layout/assets/shared-27bc3aa3.js">
+  <link rel="modulepreload" crossorigin href="/2024_hex_worldWear_layout/assets/pagination-6b8121bd.js">
+  <link rel="modulepreload" crossorigin href="/2024_hex_worldWear_layout/assets/aos-13730317.js">
+  <link rel="stylesheet" href="/2024_hex_worldWear_layout/assets/shared-915d6dae.css">
 </head>
 
 <body>
@@ -18,10 +22,10 @@
     <div class="container">
       <div class="d-flex justify-content-lg-between align-items-center w-100">
         <div class="d-flex align-items-center gap-lg-12 flex-fill">
-          <a class="text-reset me-auto m-lg-0" href="#">
+          <a class="text-reset me-auto m-lg-0" href="./index.html">
             <h1 class="d-flex">
               <svg class="l-logo" width="120" height="72">
-                <use xlink:href="/2024_hex_worldWear_layout/assets/Logo-5e463484.svg#logo"></use>
+                <use href="/2024_hex_worldWear_layout/assets/Logo-5e463484.svg#logo"></use>
               </svg>
             </h1>
           </a>
@@ -47,24 +51,38 @@
             <button type="button"
               class="header__searchIcon border-0 bg-transparent justify-content-center align-items-center p-3 p-lg-0">
               <svg width="16" height="16">
-                <use xlink:href="/2024_hex_worldWear_layout/assets/search-11897541.svg#search"></use>
+                <use href="/2024_hex_worldWear_layout/assets/search-11897541.svg#search"></use>
               </svg>
             </button>
           </div>
           <div class="ms-6 d-none d-lg-block">
             <div class="header--login__item">
               <ul class="d-flex gap-6">
-                <li>
-                  <a href="#" class="text-reset">
+                <li class="d-flex justify-content-center align-items-center">
+                  <a class="position-relative d-flex text-reset" href="./shoppingCart.html">
                     <svg width="16" height="16">
-                      <use xlink:href="/2024_hex_worldWear_layout/assets/cart-508cb739.svg#cart"></use>
+                      <use href="/2024_hex_worldWear_layout/assets/cart-b5e55b12.svg#cart"></use>
                     </svg>
+                    <span
+                      class="header__cart-badge d-flex justify-content-center align-items-center position-absolute top-0 start-100 translate-middle  rounded-circle bg-danger text-white fs-xxs">
+                      2
+                    </span>
                   </a>
                 </li>
                 <li>
-                  <a href="#" class="text-reset">
-                    <svg width="16" height="16">
-                      <use xlink:href="/2024_hex_worldWear_layout/assets/heart-9e485aca.svg#heart"></use>
+                  <a href="#" class="text-reset header__heart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <g clip-path="url(#clip0
+                      _589_3027)">
+                        <path
+                          d="M7.64139 2.32933L7.99978 2.69773L8.35817 2.32933C10.3098 0.323214 13.7938 1.04959 15.0442 3.49145C15.6529 4.68008 15.7465 6.32722 14.7313 8.33011C13.7345 10.2967 11.6697 12.5962 7.99977 15.0657C4.32982 12.5964 2.26507 10.2971 1.26826 8.33053C0.253077 6.32769 0.346661 4.68052 0.955332 3.49181C2.20576 1.04979 5.68984 0.323252 7.64139 2.32933Z"
+                          stroke="black" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_589_3027">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
                     </svg>
                   </a>
                 </li>
@@ -82,7 +100,7 @@
               <li><a class="nav-link l-menu__link" href="#">註冊</a></li>
             </ul>
             <ul class="navbar-nav l-menu d-lg-none header--login__item">
-              <li><a class="nav-link l-menu__link" href="#">購物車</a></li>
+              <li><a class="nav-link l-menu__link" href="./shoppingCart.html">購物車</a></li>
               <li><a class="nav-link l-menu__link" href="#">收藏清單</a></li>
               <li><a class="nav-link l-menu__link" href="#">會員中心</a></li>
             </ul>
@@ -92,10 +110,10 @@
           class="l-menu__collapse-btn border-0 bg-transparent p-2 ">
           <div class="header--logout__item">
             <svg width="24" height="24">
-              <use xlink:href="/2024_hex_worldWear_layout/assets/list-e5dddd12.svg#list"></use>
+              <use href="/2024_hex_worldWear_layout/assets/list-01c76977.svg#list"></use>
             </svg>
             <svg class="d-none" width="24" height="24">
-              <use xlink:href="/2024_hex_worldWear_layout/assets/close-f2a2f97e.svg#close"></use>
+              <use href="/2024_hex_worldWear_layout/assets/close-f2a2f97e.svg#close"></use>
             </svg>
           </div>
           <img class="header--login__item" src="data:image/png;base64,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" alt="user" width="24" height="24">
@@ -105,7 +123,7 @@
     <div id="navbarDropdownWoman" class="l-menu__dropdown">
       <div class="container">
         <ul class="l-menu__dropdown-menu">
-          <li><a class="l-menu__dropdown-link" href="#">所有商品</a></li>
+          <li><a class="l-menu__dropdown-link" href="productList.html">所有商品</a></li>
           <li><a class="l-menu__dropdown-link" href="#">上衣</a></li>
           <li><a class="l-menu__dropdown-link" href="#">外套</a></li>
           <li><a class="l-menu__dropdown-link" href="#">褲子</a></li>
@@ -134,7 +152,7 @@
           style="background-image: url('/2024_hex_worldWear_layout/assets/index-banner-l-38761fce.png');">
           <div class="d-flex flex-column text-center position-relative z-1">
             <p class="fw-bold tracking-md fs-base fs-md-h6">Shop</p>
-            <h2 class="fs-dh2 fs-md-dh1 tracking-md fst-italic  fst-italic ">WOMAN</h2>
+            <h2 class="fs-dh2 fs-md-dh1 tracking-md fst-italic  font-dm-serif">WOMAN</h2>
           </div>
         </div>
         <div
@@ -147,7 +165,7 @@
         </div>
       </div>
 
-      <section class="py-8 py-md-10 section__activity">
+      <section class="py-8 py-md-10 section__activity" data-aos="fade-up">
         <div class="container position-relative z-1 text-center">
           <div class="d-flex gap-3 flex-column">
             <h2 class="text-secondary-60  fs-h6 fw-bold text-md-secondary-40 fs-md-h4">全館三件免運</h2>
@@ -158,7 +176,7 @@
         </div>
       </section>
 
-      <section class="section__slogan py-10 py-md-20">
+      <section class="section__slogan py-10 py-md-20" data-aos="fade-up">
         <div class="container">
           <div class="d-flex justify-content-between align-items-xl-start
            flex-column  flex-xl-row">
@@ -183,8 +201,426 @@
           </div>
         </div>
       </section>
+
+      <section class="section__productCategories py-10  bg-nature-95 bg-md-nature-99" data-aos="fade-up">
+        <div class="container">
+          <nav class="d-flex justify-content-center w-100 mb-6 mb-md-10 w-sm-auto">
+            <div class="nav nav-tabs section__productCategories-nav" id="nav-tab" role="tablist">
+              <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                type="button" role="tab" aria-controls="nav-home" aria-selected="true">Women</button>
+              <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Men</button>
+            </div>
+          </nav>
+        </div>
+        <div class="container-sm">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+              tabindex="0">
+              <div class="swiper-container swiper__productCategories-container">
+                <div class="swiper swiper__productCategories text-white">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <div class="swiper__productCategories-item swiper__productCategories-item--dark "
+                        style="background-image: url('/2024_hex_worldWear_layout/assets/category-top-ea5cc417.png');">
+                        <div class="pb-7 text-center d-flex flex-column justify-content-end h-100">
+                          <a href="#" class="text-reset stretched-link">
+                            <h2 class="fs-sm fs-md-h6 fw-bold">上衣</h2>
+                          </a>
+                          <h3 class="fs-dh2 fs-md-dh1 fst-italic fw-normal font-dm-serif">Top</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper__productCategories-item"
+                        style="background-image: url('/2024_hex_worldWear_layout/assets/category-jacket-9e8625ce.png');">
+                        <div class="pb-7 text-center d-flex flex-column justify-content-end h-100">
+                          <a href="#" class="text-reset stretched-link">
+                            <h2 class="fs-sm fs-md-h6 fw-bold">外套</h2>
+                          </a>
+                          <h3 class="fs-dh2 fs-md-dh1 fst-italic fw-normal font-dm-serif">Jacket</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper__productCategories-item swiper__productCategories-item--shadow"
+                        style="background-image: url('/2024_hex_worldWear_layout/assets/category-dress-8bdda1b7.png');">
+                        <div class="pb-7 text-center d-flex flex-column justify-content-end h-100">
+                          <a href="#" class="text-reset stretched-link">
+                            <h2 class="fs-sm fs-md-h6 fw-bold">洋裝</h2>
+                          </a>
+                          <h3 class="fs-dh2 fs-md-dh1 fst-italic fw-normal font-dm-serif">Dress</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper__productCategories-item"
+                        style="background-image: url('/2024_hex_worldWear_layout/assets/category-pants-f4030bc2.png');">
+                        <div class="pb-7 text-center d-flex flex-column justify-content-end h-100">
+                          <a href="#" class="text-reset stretched-link">
+                            <h2 class="fs-sm fs-md-h6 fw-bold">褲子</h2>
+                          </a>
+                          <h3 class="fs-dh2 fs-md-dh1 fst-italic fw-normal font-dm-serif">Pants</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper__productCategories-item swiper__productCategories-item--dark"
+                        style="background-image: url('/2024_hex_worldWear_layout/assets/category-skirt-86ee86dc.png');">
+                        <div class="pb-7 text-center d-flex flex-column justify-content-end h-100">
+                          <a href="#" class="text-reset stretched-link">
+                            <h2 class="fs-sm fs-md-h6 fw-bold">裙子</h2>
+                          </a>
+                          <h3 class="fs-dh2 fs-md-dh1  fst-italic fw-normal font-dm-serif">Skirts</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper__productCategories-item swiper__productCategories-item--dark"
+                        style="background-image: url('/2024_hex_worldWear_layout/assets/category-accessories-1d735dc0.png');">
+                        <div class="pb-7 text-center d-flex flex-column justify-content-end h-100">
+                          <a href="#" class="text-reset stretched-link">
+                            <h2 class="fs-sm fs-md-h6 fw-bold">服飾配件</h2>
+                          </a>
+                          <h3 class="fs-h2 fs-md-h1 fst-italic fw-normal font-dm-serif">Accessories</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-button-prev">
+                  <svg width="18" height="32">
+                    <use href="/2024_hex_worldWear_layout/assets/prev-975cf5a1.svg#prev"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-next">
+                  <svg width="18" height="32">
+                    <use href="/2024_hex_worldWear_layout/assets/next-09779bda.svg#next"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+              <div class="swiper-container swiper__productCategories-container">
+                <div class="swiper swiper__productCategories text-white">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <div class="swiper__productCategories-item swiper__productCategories-item--dark "
+                        style="background-image: url('/2024_hex_worldWear_layout/assets/category-top-m-4fe19c1e.png');">
+                        <div class="pb-7 text-center d-flex flex-column justify-content-end h-100">
+                          <a href="#" class="text-reset stretched-link">
+                            <h2 class="fs-sm fs-md-h6 fw-bold">上衣</h2>
+                          </a>
+                          <h3 class="fs-dh2 fs-md-dh1 fst-italic fw-normal font-dm-serif">Top</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper__productCategories-item"
+                        style="background-image: url('/2024_hex_worldWear_layout/assets/category-jacket-m-a5856e50.png');">
+                        <div class="pb-7 text-center d-flex flex-column justify-content-end h-100">
+                          <a href="#" class="text-reset stretched-link">
+                            <h2 class="fs-sm fs-md-h6 fw-bold">外套</h2>
+                          </a>
+                          <h3 class="fs-dh2 fs-md-dh1 fst-italic fw-normal font-dm-serif">Jacket</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper__productCategories-item swiper__productCategories-item--dark"
+                        style="background-image: url('/2024_hex_worldWear_layout/assets/category-pants-m-7c0d5528.png');">
+                        <div class="pb-7 text-center d-flex flex-column justify-content-end h-100">
+                          <a href="#" class="text-reset stretched-link">
+                            <h2 class="fs-sm fs-md-h6 fw-bold">褲子</h2>
+                          </a>
+                          <h3 class="fs-dh2 fs-md-dh1 fst-italic fw-normal font-dm-serif">Pants</h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper__productCategories-item swiper__productCategories-item--dark"
+                        style="background-image: url('/2024_hex_worldWear_layout/assets/category-accessories-m-a3da5c1a.png');">
+                        <div class="pb-7 text-center d-flex flex-column justify-content-end h-100">
+                          <a href="#" class="text-reset stretched-link">
+                            <h2 class="fs-sm fs-md-h6 fw-bold">服飾配件</h2>
+                          </a>
+                          <h3 class="fs-h2 fs-md-h1 fst-italic fw-normal font-dm-serif">Accessories</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- If we need pagination -->
+                  <div class="swiper-pagination"></div>
+                </div>
+                <div class="swiper-button-prev">
+                  <svg width="18" height="32">
+                    <use href="/2024_hex_worldWear_layout/assets/prev-975cf5a1.svg#prev"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-next">
+                  <svg width="18" height="32">
+                    <use href="/2024_hex_worldWear_layout/assets/next-09779bda.svg#next"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-10 py-md-20 bg-nature-95 bg-md-nature-99" data-aos="fade-up">
+        <div class="container-sm">
+          <h2 class="fs-h5 fs-md-h2 fw-bold mb-6">熱門商品</h2>
+          <div class="swiper-container swiper__popularProducts-container">
+            <div class="swiper swiper__popularProducts">
+              <div class="swiper-wrapper">
+                
+                  <div class="swiper-slide position-relative">
+                    <img class="w-100 img-fluid object-fit-cover mb-3" src="/2024_hex_worldWear_layout/assets/popular-product-1-18e3141e.png"
+                      alt="popular-product-1">
+                    <a href="#" class="stretched-link link-black">
+                      <h3 class="d-flex flex-column gap-0 gap-md-1 tracking-sm fs-sm fs-md-base lh-base fw-normal">
+                        <span> HOKA Speedgoat 5 Mid</span>
+                        <span>GORE-TEX 男鞋 藍色/琥珀色</span>
+                      </h3>
+                    </a>
+                  </div>
+                  <div class="swiper-slide position-relative">
+                    <img class="w-100 img-fluid object-fit-cover  mb-3" src="/2024_hex_worldWear_layout/assets/popular-product-2-1fa1e36d.png"
+                      alt="popular-product-3">
+                    <a href="#" class="stretched-link link-black">
+                      <h3 class="d-flex flex-column gap-0 gap-md-1 tracking-sm fs-sm fs-md-base lh-base fw-normal">
+                        <span> 韓國連線 七月新品 EU27</span>
+                        <span>帆布皮帶側開叉牛仔長裙</span>
+                      </h3>
+                    </a>
+                  </div>
+                  <div class="swiper-slide position-relative">
+                    <img class="w-100 img-fluid object-fit-cover mb-3" src="/2024_hex_worldWear_layout/assets/popular-product-3-324af441.png"
+                      alt="popular-product-3">
+                    <a href="#" class="stretched-link link-black">
+                      <h3 class="d-flex flex-column gap-0 gap-md-1 tracking-sm fs-sm fs-md-base lh-base fw-normal">
+                        <span>TABBY26號新縫單肩手袋</span>
+                        <span>B4/黑色（CP150）</span>
+                      </h3>
+                    </a>
+                  </div>
+                  
+                  <div class="swiper-slide position-relative">
+                    <img class="w-100 img-fluid object-fit-cover mb-3" src="/2024_hex_worldWear_layout/assets/popular-product-1-18e3141e.png"
+                      alt="popular-product-1">
+                    <a href="#" class="stretched-link link-black">
+                      <h3 class="d-flex flex-column gap-0 gap-md-1 tracking-sm fs-sm fs-md-base lh-base fw-normal">
+                        <span> HOKA Speedgoat 5 Mid</span>
+                        <span>GORE-TEX 男鞋 藍色/琥珀色</span>
+                      </h3>
+                    </a>
+                  </div>
+                  <div class="swiper-slide position-relative">
+                    <img class="w-100 img-fluid object-fit-cover  mb-3" src="/2024_hex_worldWear_layout/assets/popular-product-2-1fa1e36d.png"
+                      alt="popular-product-3">
+                    <a href="#" class="stretched-link link-black">
+                      <h3 class="d-flex flex-column gap-0 gap-md-1 tracking-sm fs-sm fs-md-base lh-base fw-normal">
+                        <span> 韓國連線 七月新品 EU27</span>
+                        <span>帆布皮帶側開叉牛仔長裙</span>
+                      </h3>
+                    </a>
+                  </div>
+                  <div class="swiper-slide position-relative">
+                    <img class="w-100 img-fluid object-fit-cover mb-3" src="/2024_hex_worldWear_layout/assets/popular-product-3-324af441.png"
+                      alt="popular-product-3">
+                    <a href="#" class="stretched-link link-black">
+                      <h3 class="d-flex flex-column gap-0 gap-md-1 tracking-sm fs-sm fs-md-base lh-base fw-normal">
+                        <span>TABBY26號新縫單肩手袋</span>
+                        <span>B4/黑色（CP150）</span>
+                      </h3>
+                    </a>
+                  </div>
+                  
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-prev">
+              <svg width="18" height="32">
+                <use href="/2024_hex_worldWear_layout/assets/prev-975cf5a1.svg#prev"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-next">
+              <svg width="18" height="32">
+                <use href="/2024_hex_worldWear_layout/assets/next-09779bda.svg#next"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="section__features py-10 py-md-20" data-aos="fade-up">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-4 section__features-card d-flex mb-6">
+              <div class="flex-grow-1 p-5 p-lg-7 bg-secondary-60 text-white features-card__content">
+                <h2 class="mb-2 fs-base fs-lg-h5 fw-bold">豐富的商品種類</h2>
+                <p class="mb-2 fs-sm fs-lg-base fw-normal">
+                  從潮流單品到經典款式
+                  <br />
+                  應有盡有
+                </p>
+                <p class="features-card__title font-dm-serif fst-italic fs-h3 fs-lg-dh1 opacity-60">SHOP</p>
+              </div>
+              <img class="section__features-img" src="/2024_hex_worldWear_layout/assets/features-img-1-ffc006a9.png" alt="" />
+            </div>
+            <div class="col-12 col-lg-4 section__features-card d-flex mb-6">
+              <div class="flex-grow-1 p-5 p-lg-7 bg-primary-80 text-black features-card__content">
+                <h2 class="mb-2 fs-base fs-lg-h5 fw-bold">優惠的代購價格</h2>
+                <p class="mb-2 fs-sm fs-lg-base fw-normal">
+                  批量採購
+                  <br />
+                  為您節省更多
+                </p>
+                <p class="features-card__title font-dm-serif fst-italic fs-h3 fs-lg-dh1 opacity-60">SAVE</p>
+              </div>
+              <img class="section__features-img" src="/2024_hex_worldWear_layout/assets/features-img-2-10da8e94.png" alt="" />
+            </div>
+            <div class="col-12 col-lg-4 section__features-card d-flex mb-6">
+              <div class="flex-grow-1 p-5 p-lg-7 bg-nature-50 text-white features-card__content">
+                <h2 class="mb-2 fs-base fs-lg-h5 fw-bold">便捷的購物體驗</h2>
+                <p class="mb-2 fs-sm fs-lg-base fw-normal">
+                  從選購到收貨
+                  <br />
+                  全程輕鬆無憂
+                </p>
+                <p class="features-card__title font-dm-serif fst-italic fs-h3 fs-lg-dh1 opacity-60">FAST</p>
+              </div>
+              <img class="section__features-img" src="/2024_hex_worldWear_layout/assets/features-img-3-20ba8ba9.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__comment pt-6  pb-25 pt-md-10 pb-md-30" data-aos="fade-up">
+        <div class="container">
+          <h2 class="fs-h5 fs-md-h2 fw-bold mb-6">熱門好評</h2>
+          <div class="row row-gap-3 row-gap-md-6">
+            <div class="col-md-6 col-lg-3">
+              <div class="bg-nature-95 p-4 p-md-6 h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="rounded-circle overflow-hidden w-24px h-24px w-md-40px h-md-40px">
+                    <img class="img-fluid object-fit-cover w-100 h-100 d-block" src="/2024_hex_worldWear_layout/assets/comment-1-5fa0b8f1.png"
+                      alt="comment-1">
+                  </div>
+                  <h3 class="fs-xs fs-md-h6 fw-bold">陳志豪</h3>
+                </div>
+                <p class="fs-sm tracking-sm fs-md-base">
+                  外套質量超乎預期！面料柔軟舒適，剪裁合身。冬天保暖又時尚，絕對值得購買。
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="bg-nature-95 p-4 p-md-6 h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="rounded-circle overflow-hidden w-24px h-24px w-md-40px h-md-40px">
+                    <img class="img-fluid object-fit-cover w-100 h-100 d-block" src="/2024_hex_worldWear_layout/assets/comment-2-5c32d3c2.png"
+                      alt="comment-2">
+                  </div>
+                  <h3 class="fs-xs fs-md-h6 fw-bold">張大名</h3>
+                </div>
+                <p class="fs-sm tracking-sm fs-md-base">
+                  上衣款式新穎，穿著非常舒適。洗滌後也不變形，是我衣櫥的新寵。
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="bg-nature-95 p-4 p-md-6 h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="rounded-circle overflow-hidden w-24px h-24px w-md-40px h-md-40px">
+                    <img class="img-fluid object-fit-cover w-100 h-100 d-block" src="/2024_hex_worldWear_layout/assets/comment-3-4e8c527e.png"
+                      alt="comment-3">
+                  </div>
+                  <h3 class="fs-xs fs-md-h6 fw-bold">王芳</h3>
+                </div>
+                <p class="fs-sm tracking-sm fs-md-base">
+                  這條洋裝太讚了！適合各種場合，穿起來很有氣質。朋友們都誇我眼光好。
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="bg-nature-95 p-4 p-md-6 h-100">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="rounded-circle overflow-hidden w-24px h-24px w-md-40px h-md-40px">
+                    <img class="img-fluid object-fit-cover w-100 h-100 d-block" src="/2024_hex_worldWear_layout/assets/comment-4-16a410a0.png"
+                      alt="comment-4">
+                  </div>
+                  <h3 class="fs-xs fs-md-h6 fw-bold">林小美</h3>
+                </div>
+                <p class="fs-sm tracking-sm fs-md-base">
+                  褲子的質地和做工都很棒，穿著舒適又耐穿。尤其適合辦公室穿搭，很專業。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+
     </main>
-    <!-- <footer class="footer">我是 footer</footer> -->
+    
+<footer> 
+    
+    <a class="topBtn pe-none opacity-0" href="#"><img src="/2024_hex_worldWear_layout/assets/topBtn-98403a35.png" alt="top"></a>
+
+
+    <div class="bg-black ">
+        <div  class="container">
+            <div class="footerDiv d-flex">
+                <div class="align-content-center">
+                    <img class="imgLog" src="data:image/png;base64,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" alt="LOG">
+                </div>
+                <div class="footerLinkDiv d-flex w-60 ">
+                    <ul class="d-flex">
+                        <li class="footerLinkli">
+                            <a class="Linktxt text-white" href="#">代購流程</a>
+                        </li>
+                        <li class="footerLinkli">
+                            <a class="Linktxt text-white" href="#">常見問題</a>
+                        </li>
+                        <li class="footerLinkli">
+                            <a class="Linktxt text-white" href="#">聯繫我們</a>
+                        </li>
+                        <li class="footerLinkli">
+                            <a class="Linktxt text-white" href="#">隱私權政策</a>
+                        </li>
+                    </ul>
+                    <ul class="d-flex footerIconLinkDiv ">
+                        <li class="pr24px">
+                            <a href="#"><img class="w16px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADVSURBVHgBnVOBEYIwDAxMwAYyAk4ATuAojKAb4Aa6AW4AToAb1BHcIH6knG2kWvi7P+6a5PMJLZECM1dgAxr+YADPYE4hIJiBJ/6PJiQwcDwkN3OLQ50NWIMbsLBj+E5kLg4jVy4PKl6RUvVsqsW27C92dMHh2TtHoAvkmBTxgtYjp1+dZ/5Uo5PFwYPiod3eRaDXSXaxtdP5KGdzAtOG1y6xTJMkEQdXWo4Lam9TB3kHZoEDyX1fZdkBQemJz05UIzr34NbWfAPKex5vXeuctdZFqfNfV9gDkyo8tMYAAAAASUVORK5CYII=" alt="FB"></a>
+                        </li>
+                        <li class="pr24px">
+                            <a href="#"><img class="w16px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADfSURBVHgBpZMBDYNADEULQQASTsI5GA6GA3AwHGwOJgGmACTMAZkCcLA56NrlMxoyCLCX/KQ5+pufu0I0gZlTUS3qeKTFWUZzyMdkYppDe/zUnPN2ssHsRE/ejnpcJDPOolj0gpypVd7UPUI76KQDEhw2aLiYuhIVMCs39B8xIA9RLKGmB2od1JmBcWhiERor06CUQRA0gwEJhlfoI8QtcNhDiTF4uawaNZkkyv2fV+jU+xnD+/YgJYsceF63iZp2caU1je59y79je1qLNJfGfBXFtAUe/8oD7eF7ywu8AdmcyGVcUC34AAAAAElFTkSuQmCC" alt="LINE"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img class="w16px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEhSURBVHgBjZPhkYIwFIQT5v4fJVACV8FBB14FYgdnBdqBdqBWoB2gFUgH2oGxAtx1Fo0xim/mm5Dk7WNfCMYg2rZNwRTU4NS+Du7twdAorArsMeRgK94F8wagASXFlar/9gg7pzkopJkYWVq/EaTefCZhrnbrBOuZ7PjCgdo6Eb2EeTuwtNY2ajVngTQUY6AjByrwrxwWPEI88tJTc+vlXuBAIu1cLXvzCYVJkJSppbl5jhUowsXExMNF1r5jiQ8F0N8RA6kiuTyLbbj4FUkcg7XOga2cAW8eD3IUc+ACFxsMf5qywELPpRz64Wx3stgsw+rdJcKei+zxU2e3z8HraT4M7yoPrd5CF/xJaL/p0ReigbMfv2qlK9v3O9dyfW3vArEdHHxK2SwDAAAAAElFTkSuQmCC" alt="IG"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footerCopyrightDiv w-30">
+                    <p class="text-white">Copyright © WorldWear all rights reserved</p>
+                </div>
+            </div>
+    
+        </div >
+    </div>
+
+</footer>
+
+      
       
 </body>
 
