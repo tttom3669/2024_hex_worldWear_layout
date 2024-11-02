@@ -10,141 +10,152 @@
 
 <body>
     <%- include('./layout/header',{type: 'light' ,mode: 'login' }); -%>
-    
+
         <div class="shoppingCartLayoutGrid m-auto ">
-            <%- include('./layout/cartFlow',{stage: '1'  }); -%>
-            <div class="cart">
-                <h6 class="mb-4 fw-bold fs-24px">購物車</h6>
+            <%- include('./layout/cartFlow',{stage: '1' }); -%>
+                <div class="cart">
+                    <h6 class="mb-4 fw-bold fs-24px">購物車</h6>
 
-                <div class="cartHeader d-flex fw-bold">
-                    <div class="w60 ">商品資料</div>
-                    <div class="w10">單價</div>
-                    <div class=" d-flex w30">
-                        <div class="w-50">數量</div>
-                        <div class="w-50">小計</div>
+                    <div class="cartHeader d-flex fw-bold">
+                        <div class="w60 ">商品資料</div>
+                        <div class="w10">單價</div>
+                        <div class=" d-flex w30">
+                            <div class="w-50">數量</div>
+                            <div class="w-50">小計</div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="cartCard card ">
-                    <div class="cartCardBody card-body d-flex">
+                    <div class="cartCard card ">
+                        <div class="cartCardBody card-body d-flex">
 
-                        <img class="cartProductImg " src="../assets/images/shoppingProduct1.png"
-                            alt="韓國連線 七月新品 EU27 帆布皮帶側開岔牛仔長裙">
+                            <img class="cartProductImg " src="../assets/images/shoppingProduct1.png"
+                                alt="韓國連線 七月新品 EU27 帆布皮帶側開岔牛仔長裙">
 
-                        <div class="productIntroduction d-flex flex-column justify-content-center w45">
-                            <p class="mb-3">韓國連線 七月新品 EU27 帆布皮帶側開岔牛仔長裙</p>
-                            <p>規格：白/L</p>
-                        </div>
-
-                        <div class="cartUnitPrice d-flex  flex-column align-items-center justify-content-center w10">
-                            <p>$2,090</p>
-                            <p class="delMoneyStyle">$2,290</p>
-                        </div>
-                        <div class="mobelQtyTotalDiv d-flex justify-content-sm-around  w30">
-                            <div class="cartQuantity d-flex w80 justify-content-center  align-items-center">
-                                <div class="d-flex   ">
-                                    <button id="btnReduce" class="btnNumber btn " type="button">-</button>
-                                    <input type="number" class="inputNum" value="1">
-                                    <button id="btnReduce" class="btnNumber btn " type="button">+</button>
-                                </div>
+                            <div class="productIntroduction d-flex flex-column justify-content-center w45">
+                                <p class="mb-3">韓國連線 七月新品 EU27 帆布皮帶側開岔牛仔長裙</p>
+                                <p>規格：白/L</p>
                             </div>
-                            <div class=" cartTotal d-flex w20 flex-column align-items-center justify-content-center ">
+
+                            <div
+                                class="cartUnitPrice d-flex  flex-column align-items-center justify-content-center w10">
                                 <p>$2,090</p>
+                                <p class="delMoneyStyle">$2,290</p>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="cartCard card ">
-                    <div class="cartCardBody card-body d-flex">
-
-                        <img class="cartProductImg " src="../assets/images/shoppingProduct2.png" alt="條紋襯衫裙">
-
-                        <div class=" productIntroduction d-flex flex-column justify-content-center w45">
-                            <p class="mb-3">條紋襯衫裙</p>
-                            <p>規格：黑/F</p>
-                        </div>
-
-                        <div class=" cartUnitPrice d-flex  flex-column align-items-center justify-content-center w10">
-                            <p>$890</p>
-                        </div>
-                        <div class="mobelQtyTotalDiv d-flex justify-content-sm-around  w30">
-                            <div class="cartQuantity d-flex w80 justify-content-center  align-items-center">
-                                <div class="d-flex   ">
-                                    <button id="btnReduce" class="btnNumber btn btn-light" type="button">-</button>
-                                    <input type="number" class="inputNum" value="1">
-                                    <button id="btnReduce" class="btnNumber btn btn-light" type="button">+</button>
+                            <div class="mobelQtyTotalDiv d-flex justify-content-sm-around  w30">
+                                <div class="cartQuantity d-flex  justify-content-center  align-items-center">
+                                    <div class="d-flex  ">
+                                        <button id="btnReduce" class="btnNumber btn  rounded-end-0" type="button"><img src="../assets/images/reduce.png" alt=""></button>
+                                        <input type="number" class="inputNum" value="1">
+                                        <button id="btnReduce" class="btnNumber btn rounded-start-0" type="button"><img src="../assets/images/ADD.png" alt=""></button>
+                                    </div>
+                                </div>
+                                <div
+                                    class=" cartTotal d-flex w10 flex-column align-items-center justify-content-center ">
+                                    <p>$2,090</p>
                                 </div>
                             </div>
-                            <div class="cartTotal d-flex w20 flex-column align-items-center justify-content-center ">
-                                <p>$1,780</p>
+
+                        </div>
+                    </div>
+
+                    <div class="cartCard card ">
+                        <div class="cartCardBody card-body d-flex">
+
+                            <img class="cartProductImg " src="../assets/images/shoppingProduct2.png" alt="條紋襯衫裙">
+
+                            <div class=" productIntroduction d-flex flex-column justify-content-center w45">
+                                <p class="mb-3">條紋襯衫裙</p>
+                                <p>規格：黑/F</p>
+                            </div>
+
+                            <div
+                                class=" cartUnitPrice d-flex  flex-column align-items-center justify-content-center w10">
+                                <p>$890</p>
+                            </div>
+                            <div class="mobelQtyTotalDiv d-flex justify-content-sm-around  w30">
+                                <div class="cartQuantity d-flex w80 justify-content-center  align-items-center">
+                                    <div class="d-flex   ">
+                                        <button id="btnReduce" class="btnNumber btn rounded-end-0" type="button"><img src="../assets/images/reduce.png" alt=""></button>
+                                        <input type="number" class="inputNum" value="1">
+                                        <button id="btnReduce" class="btnNumber btn rounded-start-0" type="button"><img src="../assets/images/ADD.png" alt=""></button>
+                                    </div>
+                                </div>
+                                <div
+                                    class="cartTotal d-flex w10 flex-column align-items-center justify-content-center ">
+                                    <p>$1,780</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class=" discountDiv  d-flex mt-20px justify-content-between p12px pb29px mb20px">
+                        <div class="discountCodeDiv d-flex flex-column">
+                            <div class="d-flex w-100">
+                                <!-- <input type="text" class="discountCodetxt w45" name="" id="txtDiscountCode">
+                            <button type="button" name="" id="btnDiscountCode"
+                                class="btnDiscountCode fw-bold btn btn-light plr26px">使用</button> -->
+                                <div class="input-group mb-3">
+                                    <input type="text" class="discountCodetxt w45 flex-grow-0 flex-shrink-0  form-control" placeholder=""
+                                        aria-label="discountCodetxt" aria-describedby="discountCodetxt">
+                                    <button class="  btnDiscountCode fw-bold btn btn-light plr26px" type="button"
+                                        id="button-addon2">使用</button>
+                                </div>
+                            </div>
+                            <div class=" discountCodeMessageDiv d-flex w-100 ">
+                                <p class="discountCodeMessage bg-BrandRed mt-12px fs-14px rounded-1  ">商品適用優惠：新會員優惠 10%
+                                    off
+                                </p>
                             </div>
                         </div>
-
+                        <div class="d-flex ">
+                            <div class="mr-24px">
+                                <p>商品金額</p>
+                                <p>折扣碼折抵</p>
+                            </div>
+                            <div class=" text-end ">
+                                <p>$4,070</p>
+                                <p class="text-danger">$417</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end mb20px  totalDiv pb20px">
+                        <p class="align-content-center fw-bold ">3 項商品</p>
+                        <p class="totalNum fw-bold ">$3,663</p>
                     </div>
                 </div>
 
-
-                <div class=" discountDiv  d-flex mt-20px justify-content-between p12px pb29px mb20px">
-                    <div class="discountCodeDiv d-flex flex-column">
-                        <div class="d-flex w-100">
-                            <input type="text" class="DiscountCodetxt w45" name="" id="txtDiscountCode">
-                            <button type="button" name="" id="btnDiscountCode"
-                                class="btnDiscountCode fw-bold btn btn-light plr26px">使用</button>
-                        </div>
-                        <div class=" discountCodeMessageDiv d-flex w-100 ">
-                            <p class="discountCodeMessage bg-BrandRed mt-12px fs-14px rounded-1  ">商品適用優惠：新會員優惠 10% off
-                            </p>
-                        </div>
-                    </div>
-                    <div class="d-flex ">
-                        <div class="mr-24px">
-                            <p>商品金額</p>
-                            <p>折扣碼折抵</p>
-                        </div>
-                        <div class=" text-end ">
-                            <p>$4,070</p>
-                            <p class="text-danger">$417</p>
-                        </div>
-                    </div>
+                <div class="checkoutDiv  d-flex justify-content-end">
+                    <input type="button" class="btnKeepShopping btn border border-dark fw-bold" value="繼續逛逛">
+                    <input type="button" class="btnCheckout btn  fw-bold  " value="前往結賬">
                 </div>
-                <div class="d-flex justify-content-end mb20px  totalDiv pb20px">
-                    <p class="align-content-center fw-bold ">3 項商品</p>
-                    <p class="totalNum fw-bold ">$3,663</p>
+
+                <div class="mt-120px mb120px illustrate w70">
+                    <p class="fw-bold text-dark">購買說明</p>
+                    <p class="mt-16px">我們承諾所售商品均為正品，並來自經過嚴格篩選的供應商。若您對商品的真偽有任何疑問，請立即聯繫我們。</p>
+                    <p class="fw-bold mt-16px text-dark">退換貨說明</p>
+                    <ul class="mt-12px">
+                        <li class="d-flex">
+                            <p> · </p>
+                            <p>因海外訂單配送歷程繁瑣，因此無法提供退換貨服務，請您選購商品時，務必謹慎確認訂單內容商品及數量，跨國商品不接受任何原因的退換貨。</p>
+                        </li>
+                        <li class="d-flex">
+                            <p> · </p>
+                            <p>若拒絕簽收包裹、收件資訊不正確導致無法配送、無人簽收等個人因素導致包裹退回，我們將直接取消整筆訂單。退款金額須扣除實際產生之來回運費，再退回原訂單餘額。</p>
+                        </li>
+                    </ul>
+                    <p class="fw-bold mt-16px text-dark">付款說明</p>
+                    <ul class="mt-12px">
+                        <li class="d-flex">
+                            <p> · </p>
+                            <p>商品價格以顯示的貨幣為準，若使用其他貨幣付款，請注意匯率可能會影響最終支付金額。</p>
+                        </li>
+                    </ul>
+
+                    <p class="mt-16px text-black-50">*Worldwear 保有最終修改、變更、活動解釋及取消活動之權利，若有相關異動將會公告於網站，恕不另行通知。</p>
+
                 </div>
-            </div>
-
-            <div class="checkoutDiv  d-flex justify-content-end">
-                <input type="button" class="btnKeepShopping btn border border-dark fw-bold" value="繼續逛逛">
-                <input type="button" class="btnCheckout btn  fw-bold  " value="前往結賬">
-            </div>
-
-            <div class="mt-120px mb120px illustrate w70">
-                <p class="fw-bold text-dark">購買說明</p>
-                <p class="mt-16px">我們承諾所售商品均為正品，並來自經過嚴格篩選的供應商。若您對商品的真偽有任何疑問，請立即聯繫我們。</p>
-                <p class="fw-bold mt-16px text-dark">退換貨說明</p>
-                <ul class="mt-12px">
-                    <li class="d-flex">
-                        <p> · </p>
-                        <p>因海外訂單配送歷程繁瑣，因此無法提供退換貨服務，請您選購商品時，務必謹慎確認訂單內容商品及數量，跨國商品不接受任何原因的退換貨。</p>
-                    </li>
-                    <li class="d-flex">
-                        <p> · </p>
-                        <p>若拒絕簽收包裹、收件資訊不正確導致無法配送、無人簽收等個人因素導致包裹退回，我們將直接取消整筆訂單。退款金額須扣除實際產生之來回運費，再退回原訂單餘額。</p>
-                    </li>
-                </ul>
-                <p class="fw-bold mt-16px text-dark">付款說明</p>
-                <ul class="mt-12px">
-                    <li class="d-flex">
-                        <p> · </p>
-                        <p>商品價格以顯示的貨幣為準，若使用其他貨幣付款，請注意匯率可能會影響最終支付金額。</p>
-                    </li>
-                </ul>
-
-                <p class="mt-16px text-black-50">*Worldwear 保有最終修改、變更、活動解釋及取消活動之權利，若有相關異動將會公告於網站，恕不另行通知。</p>
-
-            </div>
 
 
         </div>
