@@ -1,6 +1,6 @@
 <div class="cartFlowGrid ">
     <div class="d-flex w-100 flex-column align-items-center">
-        <div class="d-flex cartFlowTxtDiv w76 align-items-center mb12px">
+        <div class="d-flex cartFlowTxtDiv w76 align-items-center fw-bold mb12px">
             <div>
                 <p class="textcolors-Yellow">購物明細</p>
             </div>
@@ -11,14 +11,14 @@
                 <p class="textcolors-Yellow">完成訂單</p>
             </div>
         </div>
-        <div class="d-flex w-100 justify-content-center pl12px">
-            <div class="d-flex flex-column w35">
+        <div class=" d-flex w-100 justify-content-center pl12px">
+            <div class=" cartFlowDiv d-flex flex-column ">
                 <div class=" d-flex ">
                     <p class="cartFlowP rounded-circle <%= (stage==='1' ) ? 'cartFlowChk' : '' %>">1</p>
                     <hr class= " flex-fill  <%= (stage==='1' ) ? 'cartFlowChk_hr' : '' %>">
                 </div>
             </div>
-            <div class="d-flex flex-column w35">
+            <div class="cartFlowDiv d-flex flex-column ">
                 <div class=" d-flex">
                     <p class="cartFlowP rounded-circle <%= (stage==='2' ) ? 'cartFlowChk' : '' %>">2</p>
                     <hr class=" flex-fill  <%= (stage==='2' ) ? 'cartFlowChk_hr' : ''  %>">
