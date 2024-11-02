@@ -10,7 +10,7 @@
 
   <body>
     <%- include('./layout/header',{type: 'light' ,mode: 'login' }); -%>
-    <main class="product container">
+    <main class="mb-20 product container">
       <div class="row justify-content-center">
         <!-- 左側區塊：商品圖片區 -->
         <div class="col-md-5">
@@ -24,51 +24,57 @@
           <h1 class="mb-3">休閒上衣</h1>
           <p class="mb-3 fs-h6">$590 <s class="origin-price">$690</s></p>
   
-          <div class="mb-3">
+          <div class="mb-1">
             <span class="fs-base">顏色：</span>
-            <span class="fs-base">黑色</span>
+            <span id="selected-color" class="fs-base"></span>
           </div>
 
-          <div class="mb-3">
-            <button class="btn btn-outline-primary btn-sm fs-base">米色</button>
-            <button class="btn btn-outline-primary btn-sm fs-base">白色</button>
-            <button class="btn btn-outline-primary btn-sm fs-base active">黑色</button>
+          <div class="mb-3 color-btn">
+            <button class="btn btn-outline-primary btn-sm fs-base" data-color="米色">米色</button>
+            <button class="btn btn-outline-primary btn-sm fs-base" data-color="白色">白色</button>
+            <button class="btn btn-outline-primary btn-sm fs-base" data-color="黑色">黑色</button>
           </div>
   
-          <div class="mb-3">
+          <div class="mb-2">
             <span class="fs-base">尺寸：</span>
-            <span class="fs-base">S</span>
+            <span id="selected-size" class="fs-base"></span>
           </div>
 
           <div class="mb-3 btn-size">
-            <button class="btn btn-outline-primary btn-circle active">S</button>
-            <button class="btn btn-outline-primary btn-circle">M</button>
-            <button class="btn btn-outline-primary btn-circle">L</button>
-            <button class="btn btn-outline-primary btn-circle">XL</button>
-            <button class="btn btn-outline-primary btn-circle">2XL</button>
+            <button class="btn btn-outline-primary btn-circle" data-size="S">S</button>
+            <button class="btn btn-outline-primary btn-circle" data-size="M">M</button>
+            <button class="btn btn-outline-primary btn-circle" data-size="L">L</button>
+            <button class="btn btn-outline-primary btn-circle" data-size="XL">XL</button>
+            <button class="btn btn-outline-primary btn-circle" data-size="2XL">2XL</button>
           </div>
   
-          <div class="mb-3">
+          <div class="mb-1">
             <label for="quantity" class="form-label">數量：</label>
-            <span>1</span>
+            <span id="quantity-display">1</span>
           </div>
-
+          
           <div class="d-flex flex-row mb-3">
-            <button class="btn btn-outline-primary btn-count btn-count-left"> 
+            <button class="btn btn-outline-primary btn-count btn-count-left">
               <svg width="24" height="24">
                 <use href="/assets/images/iconminus.svg#minus"></use>
               </svg>
             </button>
             <input type="number" class="input" id="quantity" value="1" min="1" readonly>
-            <button class="btn btn-outline-primary btn-count btn-count-right"> 
+            <button class="btn btn-outline-primary btn-count btn-count-right">
               <svg width="24" height="24">
                 <use href="/assets/images/plus.svg#plus"></use>
               </svg>
             </button>
           </div>
   
-          <button class="mb-3 p-4 fs-base fw-bold btn btn-warning w-100">加入購物車</button>
-          <button class="mb-3 p-4 fs-base fw-bold btn btn-outline-primary w-100">加入喜愛收藏</button>
+          <button class="d-flex justify-content-center align-items-center mb-3 p-4 fs-base fw-bold btn btn-warning w-100">
+            <img class="product-icon me-2" src="../assets/images/icon-cart.png" alt="icon-cart">
+            加入購物車
+          </button>
+          <button id="favorite-button" class="d-flex justify-content-center align-items-center mb-3 p-4 fs-base fw-bold btn btn-outline-primary w-100">
+            <img id="favorite-icon" class="product-icon me-2" src="../assets/images/icon-heart-outline.png" alt="icon-heart-outline">
+            加入喜愛收藏
+          </button>
   
           <div class="mb-10 px-2 py-1 fs-sm tag">
             商品適用優惠：新會員優惠10%off
@@ -77,25 +83,83 @@
           <div class="product-content">
             <ul class="nav nav-tabs fs-base fw-bold product-content__button-groupz">
               <li class="nav-item product-content__btn">
-                <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">商品資訊</button>
+                <button class="nav-link active" id="nav-info-tab" data-bs-toggle="tab" data-bs-target="#nav-info" type="button" role="tab" aria-controls="info" aria-selected="true">商品資訊</button>
               </li>
               <li class="nav-item product-content__btn">
-                <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">洗滌方式</button>
-              </li>
+                <button class="nav-link" id="nav-wash-tab" data-bs-toggle="tab" data-bs-target="#nav-wash" type="button" role="tab" aria-controls="wash" aria-selected="true">洗滌方式</button>
+              </li> 
               <li class="nav-item product-content__btn">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">尺寸指南</button>
+                <button class="nav-link" id="nav-size-tab" data-bs-toggle="tab" data-bs-target="#nav-size" type="button" role="tab" aria-controls="size" aria-selected="true">產品尺寸</button>
               </li>
             </ul>
-            <div class="p-6 product-content__detail">
-              <h3 class="mb-3 fs-base fw-normal">產品尺寸</h3>
-              <img class="mb-18 product-content__detail-img" src="../assets/images/product-size1.png" alt="product-size">
-              <h3 class="mb-3 fs-base fw-normal">產品尺寸</h3>
-              <img class="product-content__detail-img" src="../assets/images/product-size2.png" alt="product-size">
+            <div id="nab-tabContent" class="tab-content">
+              <div class="tab-pane fade show active p-6 product-content__detail" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
+                <p class="mb-3 fs-base fw-normal">材質: 100% 純棉
+                </p>
+                <p class="mb-3 fs-base fw-normal">設計: 簡約風格，適合日常穿著
+                </p>
+                <ul class="mb-3 fs-base fw-normal">
+                  <li>圓領設計,舒適貼合</li>
+                  <li>采用柔軟透氣的純棉面料,舒適親膚</li>
+                  <li>前胸有小型印刷圖案或刺繡裝飾</li>
+                </ul>
+                <p class="mb-3 fs-base fw-normal">適用場合: 休閒、運動、日常出門</p>
+                <p class="mb-3 fs-base fw-normal">產地: 中國</p>
+              </div>
+              <div class="tab-pane fade p-6 product-content__detail" id="nav-wash" role="tabpanel" aria-labelledby="nav-wash-tab">
+                <p class="mb-2 fs-base fw-normal">1. 深淺色請分開洗滌，以避免造成互相移染。</p>
+                <p class="mb-2 fs-base fw-normal">2. 請在冷水或溫水(低於30°C)中洗滌，並請使用中性洗劑，請勿浸泡。</p>
+                <p class="mb-2 fs-base fw-normal">3. 避免過度脫水，以減少衣物變形或損壞，適中脫水即可。</p>
+                <p class="mb-2 fs-base fw-normal">4. 請勿使用漂白劑、螢光增白劑及衣物柔軟劑，以免破壞布料。</p>
+              </div>
+              <div class="tab-pane fade p-6 product-content__detail" id="nav-size" role="tabpanel" aria-labelledby="nav-size-tab">
+                <img class="mb-3 product-content__detail-img" src="../assets/images/product-size1.png" alt="product-size">
+                <img class="product-content__detail-img" src="../assets/images/product-size2.png" alt="product-size">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+
+    <section class="py-10 py-md-20 bg-nature-90">
+      <div class="container-sm">
+        <h2 class="mb-6 fs-h2 fs-md-h2 fw-bold text-center">推薦穿搭</h2>
+        <div class="swiper-container swiper__popularProducts-container">
+          <div class="swiper swiper__popularProducts">
+            <div class="swiper-wrapper">
+              <% for(let i=0; i<2; i++) {%>
+                <div class="swiper-slide position-relative">
+                  <img class="w-100 img-fluid object-fit-cover mb-3" src="/assets/images/popular-product-1.png"
+                    alt="popular-product-1">
+                </div>
+                <div class="swiper-slide position-relative">
+                  <img class="w-100 img-fluid object-fit-cover  mb-3" src="/assets/images/popular-product-2.png"
+                    alt="popular-product-3">
+                </div>
+                <div class="swiper-slide position-relative">
+                  <img class="w-100 img-fluid object-fit-cover mb-3" src="/assets/images/popular-product-3.png"
+                    alt="popular-product-3">
+                </div>
+                <% }%>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-prev">
+            <svg width="18" height="32">
+              <use href="/assets/images/prev.svg#prev"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-next">
+            <svg width="18" height="32">
+              <use href="/assets/images/next.svg#next"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

@@ -1,4 +1,8 @@
 .product {
+  &-icon {
+    width: 24px;
+    height: 24px;
+  }
   .origin-price {
     color: #ADAAAA;
   }
@@ -117,4 +121,8 @@
       height: 192px;
     }
   }
+}
+
+#favorite-button:hover .product-icon {
+  content: url('../assets/images/icon-heart-fill.png');
 }
