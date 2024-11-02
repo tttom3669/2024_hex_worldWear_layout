@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>product</title>
+  </head>
+
+  <body>
+    <%- include('./layout/header',{type: 'light' ,mode: 'login' }); -%>
+    <main class="product container">
+      <div class="row justify-content-center">
+        <!-- 左側區塊：商品圖片區 -->
+        <div class="col-md-5">
+          <img src="../assets/images/product-img-1.png" class="img-fluid mb-6" alt="商品圖片1">
+          <img src="../assets/images/product-img-2.png" class="img-fluid mb-6" alt="商品圖片2">
+          <img src="../assets/images/product-img-3.png" class="img-fluid" alt="商品圖片3">
+        </div>
+  
+        <!-- 右側區塊：商品資訊與購物功能 -->
+        <div class="col-md-4">
+          <h1 class="mb-3">休閒上衣</h1>
+          <p class="mb-3 fs-h6">$590 <s class="origin-price">$690</s></p>
+  
+          <div class="mb-3">
+            <span class="fs-base">顏色：</span>
+            <span class="fs-base">黑色</span>
+          </div>
+
+          <div class="mb-3">
+            <button class="btn btn-outline-primary btn-sm fs-base">米色</button>
+            <button class="btn btn-outline-primary btn-sm fs-base">白色</button>
+            <button class="btn btn-outline-primary btn-sm fs-base active">黑色</button>
+          </div>
+  
+          <div class="mb-3">
+            <span class="fs-base">尺寸：</span>
+            <span class="fs-base">S</span>
+          </div>
+
+          <div class="mb-3 btn-size">
+            <button class="btn btn-outline-primary btn-circle active">S</button>
+            <button class="btn btn-outline-primary btn-circle">M</button>
+            <button class="btn btn-outline-primary btn-circle">L</button>
+            <button class="btn btn-outline-primary btn-circle">XL</button>
+            <button class="btn btn-outline-primary btn-circle">2XL</button>
+          </div>
+  
+          <div class="mb-3">
+            <label for="quantity" class="form-label">數量：</label>
+            <span>1</span>
+          </div>
+
+          <div class="d-flex flex-row mb-3">
+            <button class="btn btn-outline-primary btn-count btn-count-left"> 
+              <svg width="24" height="24">
+                <use href="/assets/images/iconminus.svg#minus"></use>
+              </svg>
+            </button>
+            <input type="number" class="input" id="quantity" value="1" min="1" readonly>
+            <button class="btn btn-outline-primary btn-count btn-count-right"> 
+              <svg width="24" height="24">
+                <use href="/assets/images/plus.svg#plus"></use>
+              </svg>
+            </button>
+          </div>
+  
+          <button class="mb-3 p-4 fs-base fw-bold btn btn-warning w-100">加入購物車</button>
+          <button class="mb-3 p-4 fs-base fw-bold btn btn-outline-primary w-100">加入喜愛收藏</button>
+  
+          <div class="mb-10 px-2 py-1 fs-sm tag">
+            商品適用優惠：新會員優惠10%off
+          </div>
+  
+          <div class="product-content">
+            <ul class="nav nav-tabs fs-base fw-bold product-content__button-groupz">
+              <li class="nav-item product-content__btn">
+                <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">商品資訊</button>
+              </li>
+              <li class="nav-item product-content__btn">
+                <button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">洗滌方式</button>
+              </li>
+              <li class="nav-item product-content__btn">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">尺寸指南</button>
+              </li>
+            </ul>
+            <div class="p-6 product-content__detail">
+              <h3 class="mb-3 fs-base fw-normal">產品尺寸</h3>
+              <img class="mb-18 product-content__detail-img" src="../assets/images/product-size1.png" alt="product-size">
+              <h3 class="mb-3 fs-base fw-normal">產品尺寸</h3>
+              <img class="product-content__detail-img" src="../assets/images/product-size2.png" alt="product-size">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="/assets/js/productDetail.js"></script>
+  </body>
+
+</html>

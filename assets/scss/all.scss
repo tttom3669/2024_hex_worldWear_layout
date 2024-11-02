@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Noto+Sans+TC:wght@100..900&display=swap');
+@import '/node_modules/aos/dist/aos.css';
+
 // vendors
 @import './vendors/bootstrap';
 // base
@@ -9,7 +11,12 @@
 @import './helpers/helper-utilities';
 // layout
 @import './layout/layout';
+@import './layout/cartFlow.scss';
+
 // components
 @import './components/components';
-// pages
+@import './components/pagination';
+@import './components/filterMenu';
+
 @import './pages/pages';
+@import './pages/productList';

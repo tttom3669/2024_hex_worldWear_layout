@@ -1,0 +1,140 @@
+.navCategory {
+  background-color: #ffffff;
+}
+
+.category-item .accordion-header:active {
+  background-color: gary;
+}
+
+.category-item .accordion-header:focus {
+  background-color: gary;
+}
+
+.category-button {
+  border-radius: 0;
+}
+
+.category-button:hover {
+  color: black;
+  background-color: white; //#f8f9fa
+}
+
+.category-button:not(.collapsed) {
+  background-color: white;  //#f8f9fa;
+}
+
+.category-button:focus {
+  outline: none; /* 去除默認焦點輪廓 */
+  box-shadow: 0 0 5px white; /* 設定陰影顏色和大小 */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+// /* 類別篩選選單 */
+.navCategory,
+.accordion-item {
+  border: none;
+}
+
+.navCategory
+ {
+  border-top: 1px solid #E5E2E0;
+  border-bottom: 1px solid #E5E2E0;
+  border-inline-end: 1px solid #E5E2E0;
+  border-inline-start: 1px solid #E5E2E0;
+}
+
+.category-button {
+  border-top: 1px solid #E5E2E0;
+  border-bottom: 1px solid #E5E2E0;
+}
+
+.accordion-header{
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+@media (max-width: 576px) {
+  .navCategory,
+  .accordion-item {
+    border: none;
+  }
+
+  .accordion-header {
+    border-top: 1px solid #dee2e6;
+  }
+
+  .category-button {
+    padding: 16px;
+  }
+}
+
+// .btn-check {
+//   opacity: 0; /* 使 checkbox 隱形 */
+//   position: absolute; /* 使其不影響布局 */
+//   pointer-events: none; /* 這樣無法直接點擊 checkbox */
+// }
+
+.category-subItem .btn-outline-primary {
+  pointer-events: auto; /* 確保 label 可以被點擊 */
+}
+
+.category-subItem .btn-outline-primary {
+  --bs-btn-color: black; /* 文字顏色 */
+  --bs-btn-border-color: black; /* 邊框顏色 */
+  --bs-btn-hover-color: black; /* 懸停時文字顏色 */
+  --bs-btn-hover-bg: #f8f9fa; /* 懸停時背景顏色 */
+  --bs-btn-hover-border-color: rgba(187, 187, 187, 0.738); /* 懸停時邊框顏色 */
+  --bs-btn-active-color: #fff; /* 點擊時文字顏色 */
+  --bs-btn-active-bg: black; /* 點擊時背景顏色 */
+  --bs-btn-active-border-color: black; /* 點擊時邊框顏色 */
+  transition: background-color 0.3s ease; /* 平滑過渡效果 */
+}
+
+.category-subItem .btn-outline-primary:hover,
+.category-subItem .btn-outline-primary:active {
+  color: var(--bs-btn-active-color);
+  background-color: var(--bs-btn-active-bg);
+}
+
+.offcanvas {
+  background-color: #ffffff;
+
+  &-fullscreen {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border: none;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-body {
+    padding: 0; /* 移除內邊距，讓內容佔滿版面 */
+  }
+}
+
+.offcanvasClose {
+  margin-left: auto;
+  --bs-btn-hover-color: black;
+  --bs-btn-hover-bg: #F1F0F0;
+  --bs-btn-active-color: #F1F0F0;
+  --bs-btn-active-bg: #000;
+}
+
+.checkItem {
+  height: 56px;
+  min-width: 100%;
+  background-color: #ffb962;
+  border: none;
+}
+
+.checkItem:hover {
+  color: #000;
+  background-color: #c88119;
+}

@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   z-index: 1100;
-  transition: background-color ease 0.3s;
+  transition: background-color ease 0.2s, top linear 0.1s;
   @include media-breakpoint-up(lg) {
     top: $header-aside-height;
   }
@@ -89,6 +89,27 @@
   &__searchIcon {
     color: inherit;
   }
+
+  &__cart-badge {
+    aspect-ratio: 1 / 1;
+    width: 16px;
+  }
+  &__heart {
+    svg {
+      &,
+      path {
+        transition: all 0.3s;
+      }
+    }
+    &:hover {
+      svg {
+        fill: $secondary-60;
+        path {
+          stroke: $secondary-60;
+        }
+      }
+    }
+  }
 }
 
 .l-menu {
@@ -105,11 +126,16 @@
     color: inherit;
     font-size: 14px;
     padding: 8px;
+    transition: color 0.3s;
     @include media-breakpoint-up(lg) {
       font-size: 16px;
       padding: 8px 16px;
       letter-spacing: 0.02em;
     }
+    &:hover {
+      color: $nature-80;
+    }
+
     &::before {
       display: block;
       content: '';
@@ -170,6 +196,10 @@
       letter-spacing: 0.02em;
       text-align: center;
       width: 100%;
+      transition: color 0.3s;
+      &:hover {
+        color: $nature-80;
+      }
     }
   }
   &__collapse {
@@ -236,7 +266,7 @@
     color: $white;
     &:hover,
     &:has(.l-menu__link.active),
-    &:has(.l-menu__collapse.active),
+    &:has(.l-menu__collapse.show),
     &:has(.header__searchBar-container.show) {
       background-color: $white;
       color: $black;
