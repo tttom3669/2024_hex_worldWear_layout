@@ -10,11 +10,11 @@ const productListCardList = [
     discount: 10,
   },
   {
-    productName: "印度有機棉T恤",
+    productName: "休閒上衣",
     img: "product_002.png",
-    status: "預購",
-    price: 1290,
-    discount: 40,
+    status: "現貨",
+    price: 690,
+    discount: 100,
   },
   {
     productName: "優雅襯衫",

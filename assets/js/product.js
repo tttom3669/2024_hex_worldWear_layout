@@ -15,7 +15,7 @@ export function productRender(productListCard, productList) {
 
     str += `
       <div class="col-6 col-md-4 animate__animated animate__backInRight">
-          <a href="#" class="productList-card card-column h-100">
+          <a href="product.html" class="productList-card card-column h-100">
               <div class="card g-3 h-100">
                   <div class="w-100 h-75 overflow-hidden img-wrapper position-relative rounded-top ${statusCard} productList-card-img">
                       <img src="/assets/images/product/${item.img}" 
