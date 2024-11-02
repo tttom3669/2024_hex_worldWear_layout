@@ -69,11 +69,11 @@
   }
 }
 
-.btn-check {
-  opacity: 0; /* 使 checkbox 隱形 */
-  position: absolute; /* 使其不影響布局 */
-  pointer-events: none; /* 這樣無法直接點擊 checkbox */
-}
+// .btn-check {
+//   opacity: 0; /* 使 checkbox 隱形 */
+//   position: absolute; /* 使其不影響布局 */
+//   pointer-events: none; /* 這樣無法直接點擊 checkbox */
+// }
 
 .category-subItem .btn-outline-primary {
   pointer-events: auto; /* 確保 label 可以被點擊 */
@@ -118,14 +118,6 @@
     padding: 0; /* 移除內邊距，讓內容佔滿版面 */
   }
 }
-
-// .offcanvas-header .btn .btn-outline-secondary {
-//   --bs-btn-hover-color: black;
-//   --bs-btn-hover-bg: #F1F0F0;
-//   --bs-btn-active-color: #000;
-//   --bs-btn-active-bg: #c88119;
-//   // --bs-btn-active-border-color: #6c757d;
-// }
 
 .offcanvasClose {
   margin-left: auto;

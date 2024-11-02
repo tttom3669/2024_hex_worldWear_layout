@@ -1,3 +1,5 @@
+import AOS from 'aos';
+
 export function productRender(productListCard, productList) {
 
   let str = "";
@@ -12,7 +14,7 @@ export function productRender(productListCard, productList) {
       item.discount > 0 ? Math.floor(item.price - item.discount) : null;
 
     str += `
-      <div class="col-6 col-md-4">
+      <div class="col-6 col-md-4 animate__animated animate__backInRight">
           <a href="#" class="productList-card card-column h-100">
               <div class="card g-3 h-100">
                   <div class="w-100 h-75 overflow-hidden img-wrapper position-relative rounded-top ${statusCard} productList-card-img">
@@ -119,3 +121,8 @@ export function productRender(productListCard, productList) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 }
+AOS.init({
+  useClassNames: true,
+  initClassName: 'false',
+  animatedClassName: "animate__animated",
+});
