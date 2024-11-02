@@ -104,6 +104,8 @@ $utilities: map-merge(
     // scss-docs-start utils-position
     'position':
       (
+        responsive: true,
+        //  cus*
         property: position,
         values: static relative absolute fixed sticky,
       ),
@@ -213,6 +215,8 @@ $utilities: map-merge(
     // scss-docs-start utils-sizing
     'width':
       (
+        responsive: true,
+        // cus*
         property: width,
         class: w,
         values: (
@@ -221,6 +225,8 @@ $utilities: map-merge(
           75: 75%,
           100: 100%,
           auto: auto,
+          //cus*
+          24px: 24px,
         ),
       ),
     'max-width': (
@@ -245,6 +251,8 @@ $utilities: map-merge(
       ),
     ),
     'height': (
+      responsive: true,
+      // cus*
       property: height,
       class: h,
       values: (
@@ -592,6 +600,8 @@ $utilities: map-merge(
       ),
     'font-size': (
       rfs: true,
+      responsive: true,
+      // cus*
       property: font-size,
       class: fs,
       values: $font-sizes,
@@ -663,6 +673,8 @@ $utilities: map-merge(
     // scss-docs-start utils-color
     'color':
       (
+        responsive: true,
+        //cus*
         property: color,
         class: text,
         local-vars: (
@@ -915,8 +927,39 @@ $utilities: map-merge(
         property: z-index,
         class: z,
         values: $zindex-levels,
-      )
-      // scss-docs-end utils-zindex
+      ),
+    // scss-docs-end utils-zindex
+    // cus*
+    'letter-spacing':
+      (
+        property: letter-spacing,
+        class: tracking,
+        values: (
+          sm: 0.02em,
+          md: 0.04em,
+        ),
+      ),
+    'background-size': (
+      property: background-size,
+      class: bg,
+      values: (
+        'cover': cover,
+      ),
+    ),
+    'background-position': (
+      property: background-position,
+      class: bg,
+      values: (
+        'center': center,
+      ),
+    ),
+    'background-repeat': (
+      property: background-repeat,
+      class: bg,
+      values: (
+        'no-repeat': no-repeat,
+      ),
+    )
   ),
   $utilities
 );

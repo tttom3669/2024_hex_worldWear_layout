@@ -9,33 +9,64 @@
 </head>
 
 <body>
-  <%- include('./layout/header'); -%>
-
-    <h1 class="index-title">我是首頁</h1>
-
-
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary-40" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
-
-    <!-- Modal 元件 -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <%- include('./layout/header',{type: 'dark' ,mode: 'logout' }); -%>
+    <main class="site-index">
+      <div class="site-index__banner">
+        <div
+          class="w-100 h-50 w-md-50 h-md-100 bg-center bg-no-repeat bg-cover text-white d-flex justify-content-center align-items-end pb-10 pb-lg-20"
+          style="background-image: url('/assets/images/index-banner-l.png');">
+          <div class="d-flex flex-column text-center position-relative z-1">
+            <p class="fw-bold tracking-md fs-base fs-md-h6">Shop</p>
+            <h2 class="fs-dh2 fs-md-dh1 tracking-md fst-italic  fst-italic ">WOMAN</h2>
           </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
+        </div>
+        <div
+          class="w-100 h-50 w-md-50 h-md-100 bg-center bg-no-repeat bg-cover text-white d-flex justify-content-center align-items-end pb-10 pb-lg-20"
+          style="background-image: url('/assets/images/index-banner-r.png');">
+          <div class="d-flex flex-column text-center position-relative z-1">
+            <p class="fw-bold tracking-md fs-base fs-md-h6">Shop</p>
+            <h2 class="fs-dh2 fs-md-dh1 tracking-md fst-italic font-dm-serif">MAN</h2>
           </div>
         </div>
       </div>
-    </div>
 
+      <section class="py-8 py-md-10 section__activity">
+        <div class="container position-relative z-1 text-center">
+          <div class="d-flex gap-3 flex-column">
+            <h2 class="text-secondary-60  fs-h6 fw-bold text-md-secondary-40 fs-md-h4">全館三件免運</h2>
+            <h3 class="fs-h1 fst-italic font-dm-serif fw-normal  fs-md-dh2">Free Shipping</h3>
+            <p>2024/8/14-2024/9/14</p>
+            <p class="fs-sm">(不含部份商品)</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__slogan py-10 py-md-20">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-xl-start
+           flex-column  flex-xl-row">
+            <div class="position-relative">
+              <div class="position-relative z-1">
+                <div class="bg-primary-50 mb-3 w-24px h-24px">&nbsp;</div>
+                <h2 class="d-flex flex-column fw-bold fs-h3 fs-md-dh1">
+                  <span>穿出你的風格</span>
+                  <span>展現你的自信</span>
+                </h2>
+              </div>
+              <div class="section__slogan-text">
+                <p>Style&Confidante</p>
+                <p>Style&Confidante</p>
+                <p>Style&Confidante</p>
+              </div>
+            </div>
+            <div class="section__slogan-img">
+              <img class="section__slogan-img--1" src="/assets/images/section-slogan-1.png" alt="Style&Confidante">
+              <img class="section__slogan-img--2" src="/assets/images/section-slogan-2.png" alt="Style&Confidante">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <%- include('./layout/footer'); -%>
 
       <script type="module" src="../main.js"></script>
