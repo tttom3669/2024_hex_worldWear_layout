@@ -6,12 +6,19 @@
     margin-bottom: 12px;
 }
 
-.w-40{
+.w35{
     width: 35%;
 }
 
 .w76{
     width: 76%;
+}
+
+.w40px{
+    width: 40px;
+}
+.h40px{
+    height: 40px;
 }
 
 .textcolors-Yellow {
@@ -35,7 +42,7 @@
     display: inline-block;
     width: 40px;
     height: 40px;
-    //color: #C88119;
+    color: #C88119;
     background-color: #FFDDB9;
     font-weight: bold;
     text-align: center;
@@ -43,22 +50,36 @@
 }
 
 hr {
-    width: 100%;
-    border: 4px #FFDDB9 solid;
-    // height: 4px;
-    // background-color: #FFDDB9;
-
+    //width: 100%;
+    background-color:#FFDDB9;
+    border: none; /* 去掉邊框 */
+    height: 4px; /* 控制粗細 */
+    opacity:100;
 }
 
 
 .cartFlowChk {
     color: #fff;
-    background-color: #A86900;
-    border-color: #A86900;
+    background-color: rgba(168, 105, 0, 1);
+    //background-color: rgba(168, 105, 0, 1);
+}
+
+.cartFlowChk_hr {
+    
+    background-color: #A86900 !important;
+    
+    //background-color: rgba(168, 105, 0, 1);
 }
 
 @media (max-width: 768px) {
     .cartFlowTxtDiv{
         width: 90%;
     }
+}
+
+
+
+.vectorImgdiv{
+    background-color: #FFDDB9;
+
 }
