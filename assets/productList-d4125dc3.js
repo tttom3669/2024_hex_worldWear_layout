@@ -3,7 +3,7 @@ import"./shared-000c49e5.js";import{A as y}from"./aos-48394f95.js";function L(e,
           <a href="product.html" class="productList-card card-column h-100">
               <div class="card g-3 h-100">
                   <div class="w-100 h-75 overflow-hidden img-wrapper position-relative rounded-top ${i} productList-card-img">
-                      <img src="/images/product/${a.img}" 
+                      <img src="./assets/images/product/${a.img}" 
                            class="card-img-top cover-img w-100 h-md-100 ${l?"mask":""}" 
                            alt="productList-image" style="object-fit: cover;">
                       <div class="position-absolute bottom-0 end-0 p-2 favorite-div">
