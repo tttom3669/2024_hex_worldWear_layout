@@ -13,12 +13,13 @@ export function productRender(productListCard, productList) {
     const discountPrice =
       item.discount > 0 ? Math.floor(item.price - item.discount) : null;
 
+      const imgUrl = new URL(`/assets/images/product/${item.img}`, import.meta.url).href;
     str += `
       <div class="col-6 col-md-4 animate__animated animate__backInRight">
           <a href="product.html" class="productList-card card-column h-100">
               <div class="card g-3 h-100">
                   <div class="w-100 h-75 overflow-hidden img-wrapper position-relative rounded-top ${statusCard} productList-card-img">
-                      <img src="/assets/images/product/${item.img}" 
+                      <img src="${imgUrl}" 
                            class="card-img-top cover-img w-100 h-md-100 ${
                              shouldHide ? "mask" : ""
                            }" 
