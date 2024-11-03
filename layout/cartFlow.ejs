@@ -1,0 +1,36 @@
+<div class="cartFlowGrid ">
+    <div class="d-flex w-100 flex-column align-items-center">
+        <div class="d-flex cartFlowTxtDiv w76 align-items-center fw-bold mb12px">
+            <div>
+                <p class="textcolors-Yellow">購物明細</p>
+            </div>
+            <div>
+                <p class="textcolors-Yellow">結帳資訊</p>
+            </div>
+            <div>
+                <p class="textcolors-Yellow">完成訂單</p>
+            </div>
+        </div>
+        <div class=" d-flex w-100 justify-content-center pl12px">
+            <div class=" cartFlowDiv d-flex flex-column ">
+                <div class=" d-flex ">
+                    <p class="cartFlowP rounded-circle <%= (stage==='1' ) ? 'cartFlowChk' : '' %>">1</p>
+                    <hr class= " flex-fill  <%= (stage==='1' ) ? 'cartFlowChk_hr' : '' %>">
+                </div>
+            </div>
+            <div class="cartFlowDiv d-flex flex-column ">
+                <div class=" d-flex">
+                    <p class="cartFlowP rounded-circle <%= (stage==='2' ) ? 'cartFlowChk' : '' %>">2</p>
+                    <hr class=" flex-fill  <%= (stage==='2' ) ? 'cartFlowChk_hr' : ''  %>">
+                </div>
+            </div>
+            <div class="vectorImgdiv <%= (stage==='3' ) ? 'cartFlowChk_hr' : '' %> d-flex flex-column w40px rounded-circle">
+                <div class=" d-flex justify-content-center align-items-center h40px w-100 " >
+                    <!-- <p class="cartFlowP rounded-circle <%= (stage==='3' ) ? 'cartFlowChk' : '' %>">3</p> -->
+                     <img class=" " src="../assets/images/Vector.png" alt="Vector">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

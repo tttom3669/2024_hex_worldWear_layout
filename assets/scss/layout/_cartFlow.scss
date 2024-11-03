@@ -1,0 +1,99 @@
+.pl12px{
+    padding-left: 12px;
+}
+.pl20px{
+    padding-left: 20px;
+}
+
+.mb12px{
+    margin-bottom: 12px;
+}
+
+.w35{
+    width: 35%;
+}
+
+.w76{
+    width: 76%;
+}
+
+.w90{
+    width: 90%;
+}
+
+.w40px{
+    width: 40px;
+}
+.h40px{
+    height: 40px;
+}
+
+.textcolors-Yellow {
+    color: #865300;
+}
+
+.cartFlowGrid {
+    max-width: 1296px;
+    // margin-top: 130px;
+    margin: 130px auto 40px auto;
+    // padding: 0px 110px; 
+    
+
+}
+
+.cartFlowTxtDiv{
+    justify-content: space-between;
+}
+
+.cartFlowP {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #C88119;
+    background-color: #FFDDB9;
+    font-weight: bold;
+    text-align: center;
+    line-height:40px;
+}
+
+hr {
+    //width: 100%;
+    background-color:#FFDDB9;
+    border: none; /* 去掉邊框 */
+    height: 4px; /* 控制粗細 */
+    opacity:100;
+}
+
+
+.cartFlowChk {
+    color: #fff;
+    background-color: rgba(168, 105, 0, 1);
+    //background-color: rgba(168, 105, 0, 1);
+}
+
+.cartFlowChk_hr {
+    
+    background-color: #A86900 !important;
+    
+    //background-color: rgba(168, 105, 0, 1);
+}
+
+.cartFlowDiv{
+    width: 35%;
+}
+
+@media (max-width: 768px) {
+    .cartFlowTxtDiv{
+        width: 95%;
+    }
+    .cartFlowDiv{
+        width: 40%;
+    }
+}
+
+
+
+.vectorImgdiv{
+    background-color: #FFDDB9;
+
+}

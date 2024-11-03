@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>商品總覽 - WorldWear</title>
+  <link rel="icon" href="/assets/favoriteIcon.png" type="image/png">
+</head>
+
+<body>
+  <div id="header-container">
+    <%- include('./layout/header',{type: 'light' ,mode: 'login' }); -%>
+  </div>
+
+  <section class="productList-section bg-nature-99">
+    <div class="container">
+      <div class="row">
+        <!-- 類別篩選選單 -->
+        <div class="col-md-3 d-none d-md-block mt-4 ps-3">
+          <div class="filterMenu-wrap"></div>
+        </div>
+        <div class="col-12 col-md-9 d-block infoTitle">
+          <div class="mb-4 mb-md-10 d-flex justify-content-between align-items-start flex-column flex-md-row">
+            <h3 class="mt-4">女裝 商品一覽</h3>
+            <!-- 電腦版 -->
+            <div class="sortList fs-6 d-none d-md-block mt-4">
+              <button type="button" class="btn btn-outline-secondary dropdown-toggle text-start"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                排序
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end dropdown-menu-product">
+                <li><a class="dropdown-item" href="#">最新上架</a></li>
+                <li><a class="dropdown-item" href="#">熱門商品</a></li>
+                <li><a class="dropdown-item" href="#">價格由低至高</a></li>
+                <li><a class="dropdown-item" href="#">價格由高至低</a></li>
+              </ul>
+            </div>
+
+            <!-- 手機版 -->
+            <div class="d-md-none w-100 mt-4 text-end">
+              <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-outline-primary selectButton ps-4" type="button" data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasCategoryMenu" aria-controls="offcanvasCategoryMenu">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h6>篩選</h6>
+                    <span class="dropdown-icon">
+                      <img src="/assets/images/icon/dropdownIcon.svg" alt="dropdown-Icon">
+                    </span>
+                </div>
+                </button>
+                <div class="sortList fs-6">
+                  <button type="button" class="btn btn-outline-secondary dropdown-toggle text-start"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    排序
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-product">
+                    <li><a class="dropdown-item" href="#">最新上架</a></li>
+                    <li><a class="dropdown-item" href="#">熱門商品</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">價格由低至高</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">價格由高至低</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 商品卡片 -->
+          <div class="row productList-card-wrap g-6">
+            <!-- 透過選擇器 productList-card-wrap 設定卡片 -->
+          </div>
+          <!-- 分頁 -->
+          <div class="d-flex justify-content-center mt-8 mt-md-16 mb-10">
+            <%- include('./layout/pagination'); -%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offcanvas 組件 -->
+  <div class="offcanvas offcanvas-fullscreen" tabindex="-1" id="offcanvasCategoryMenu"
+    aria-labelledby="offcanvasCategoryMenuLabel">
+    <div class="offcanvas-header pe-3">
+      <h5 class="offcanvas-title" id="offcanvasCategoryMenuLabel"></h5>
+      <button type="button" class="btn btn-outline-secondary offcanvasClose" data-bs-dismiss="offcanvas"
+        aria-label="Close">
+        取消
+      </button>
+    </div>
+    <div class="offcanvas-body ps-3 pe-3">
+      <div class="filterMenu-wrap"></div>
+      <div><button class="checkItem"><h6>查看品項</h6></button></div>
+    </div>
+  </div>
+
+  <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+    <script type="module" src="../assets/js/productList.js"></script>
+    <script type="module" src="../assets/js/productList_favorite.js"></script>
+    <script type="module" src="../assets/js/filterMenu_data.js"></script>
+</body>
+
+</html>
